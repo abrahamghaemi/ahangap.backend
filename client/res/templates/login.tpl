@@ -3,7 +3,6 @@
     <div id="login" class="panel panel-default">
         <div class="panel-heading">
             <div class="logo-container">
-                <img src="{{logoSrc}}" class="logo">
             </div>
         </div>
         <div class="panel-body">
