@@ -1,10 +1,6 @@
 <div class="container content">
     <div class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2">
     <div id="login" class="panel panel-default">
-        <div class="panel-heading">
-            <div class="logo-container">
-            </div>
-        </div>
         <div class="panel-body">
             <div>
                 <form id="login-form" onsubmit="return false;">
