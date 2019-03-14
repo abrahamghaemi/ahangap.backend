@@ -40,7 +40,7 @@ return [
     'useCache' => true,
     'recordsPerPage' => 20,
     'recordsPerPageSmall' => 5,
-    'applicationName' => 'snappcr',
+    'applicationName' => 'snappcrm',
     'version' => '@@version',
     'timeZone' => 'UTC',
     'dateFormat' => 'MM/DD/YYYY',
@@ -80,7 +80,7 @@ return [
         'Lead',
         'Opportunity',
     ],
-    'tabList' => ["Account", "Contact", "Lead", "Opportunity", "Case", "Email", "Calendar", "Meeting", "Call", "Task", "_delimiter_", "Document", "Campaign", "KnowledgeBaseArticle", "Stream", "User"],
+    'tabList' => ["Home", "Account", "Contact", "Lead", "Opportunity", "Case", "Email", "Calendar", "Meeting", "Call", "Task", "_delimiter_", "Document", "Campaign", "KnowledgeBaseArticle", "Stream", "User"],
     'quickCreateList' => ["Account", "Contact", "Lead", "Opportunity", "Meeting", "Call", "Task", "Case", "Email"],
     'exportDisabled' => false,
     'adminNotifications' => true,
@@ -101,7 +101,7 @@ return [
     'followCreatedEntities' => false,
     'b2cMode' => false,
     'restrictedMode' => false,
-    'theme' => 'HazyblueVertical',
+    'theme' => 'Espo',
     'massEmailMaxPerHourCount' => 100,
     'personalEmailMaxPortionSize' => 50,
     'inboundEmailMaxPortionSize' => 50,
@@ -112,7 +112,7 @@ return [
     'displayListViewRecordCount' => true,
     'dashboardLayout' => [
         (object) [
-            'name' => 'My Espo',
+            'name' => 'My CRM',
             'layout' => [
                 (object) [
                     'id' => 'default-activities',
