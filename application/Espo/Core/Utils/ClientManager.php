@@ -114,9 +114,9 @@ class ClientManager
         }
 
         $data = [
-            'applicationId' => 'espocrm-application-id',
+            'applicationId' => 'snapp-application-id',
             'apiUrl' => 'api/v1',
-            'applicationName' => $this->getConfig()->get('applicationName', 'EspoCRM'),
+            'applicationName' => $this->getConfig()->get('applicationName', 'Snapp CRM'),
             'cacheTimestamp' => $cacheTimestamp,
             'loaderCacheTimestamp' => $loaderCacheTimestamp,
             'stylesheet' => $this->getThemeManager()->getStylesheet(),
