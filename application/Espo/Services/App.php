@@ -32,7 +32,7 @@ namespace Espo\Services;
 use \Espo\Core\Exceptions\Forbidden;
 use \Espo\Core\Exceptions\Error;
 use \Espo\Core\Exceptions\NotFound;
-
+use duncan3dc\Sessions\Session;
 use \Espo\Core\Utils\Util;
 
 class App extends \Espo\Core\Services\Base
@@ -97,6 +97,12 @@ class App extends \Espo\Core\Services\Base
 
         $language = \Espo\Core\Utils\Language::detectLanguage($this->getConfig(), $this->getPreferences());
 
+
+        // snapp crm
+        // need store
+        Session::name('app');
+        Session::set('preferences', $preferencesData);
+        // end snapp
         return [
             'user' => $userData,
             'acl' => $this->getAcl()->getMap(),
