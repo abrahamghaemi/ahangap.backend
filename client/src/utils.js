@@ -270,6 +270,18 @@ define('utils', [], function () {
                 return str.substr(0, str.length - 1);
             }
             return str;
+        },
+        setRtlStatus: function(lang) {
+            if (lang === "fa_IR") {
+                window.localStorage.setItem('isRtl', true);
+                return true
+            }
+
+            window.localStorage.setItem('isRtl', false);
+            return false;
+        },
+        isRtl: function () {
+            return !!window.localStorage.getItem('isRtl');
         }
     };
 
