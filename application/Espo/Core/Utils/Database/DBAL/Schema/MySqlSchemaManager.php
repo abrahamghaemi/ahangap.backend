@@ -209,7 +209,8 @@ class MySqlSchemaManager extends \Doctrine\DBAL\Schema\MySqlSchemaManager
             case 'text':
             case 'mediumtext':
             case 'longtext':
-                $length = $this->_platform->getClobTypeLength($dbType);
+                // snappbit: fix a problem of musql80platrom  "call undefinded method"
+                $length = $this->getClobTypeLength($dbType);
                 break;
             /* Espo: end */
         }
@@ -279,6 +280,29 @@ class MySqlSchemaManager extends \Doctrine\DBAL\Schema\MySqlSchemaManager
                 return $platform->getCurrentTimeSQL();
         }
         return $columnDefault;
+    }
+    /* Espo: end */
+
+    /* Espo: fix a problem of changing text field type */
+    public function getClobTypeLength($type)
+    {
+        switch ($type) {
+            case 'tinytext':
+                return static::LENGTH_LIMIT_TINYTEXT;
+                break;
+
+            case 'text':
+                return static::LENGTH_LIMIT_TEXT;
+                break;
+
+            case 'mediumtext':
+                return static::LENGTH_LIMIT_MEDIUMTEXT;
+                break;
+
+            case 'longtext':
+                return static::LENGTH_LIMIT_LONGTEXT;
+                break;
+        }
     }
     /* Espo: end */
 }
