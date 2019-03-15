@@ -38,6 +38,16 @@ class MySqlSchemaManager extends \Doctrine\DBAL\Schema\MySqlSchemaManager
     protected $mariaDb1027;
     /* Espo: end */
 
+    /* Espo */
+    const LENGTH_LIMIT_LONGTEXT = 4294967295;
+    const LENGTH_LIMIT_TINYTEXT   = 255;
+    const LENGTH_LIMIT_TEXT       = 65535;
+    const LENGTH_LIMIT_MEDIUMTEXT = 16777215;
+    const LENGTH_LIMIT_TINYBLOB   = 255;
+    const LENGTH_LIMIT_BLOB       = 65535;
+    const LENGTH_LIMIT_MEDIUMBLOB = 16777215;
+    /* Espo: end */
+
     public function createSchema()
     {
         $sequences = array();
