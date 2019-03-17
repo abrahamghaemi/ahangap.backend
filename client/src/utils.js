@@ -281,7 +281,8 @@ define('utils', [], function () {
             return false;
         },
         isRtl: function () {
-            return !!window.localStorage.getItem('isRtl');
+            var isRtl = window.localStorage.getItem('isRtl');
+            return isRtl === "true";
         }
     };
 
