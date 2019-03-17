@@ -21,6 +21,7 @@
         "client/lib/bootstrap-datepicker.js",
         "client/lib/fa-bootstrap-datepicker.min.js",
         "client/lib/bootstrap-datepicker.fa.min.js",
+        "client/lib/persian.min.js",
         "client/lib/bull.js",
         "client/lib/marked.min.js",
         "client/lib/autobahn.js",

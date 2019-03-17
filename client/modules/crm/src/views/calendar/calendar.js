@@ -291,6 +291,19 @@ Espo.define('crm:views/calendar/calendar', ['view', 'lib!full-calendar'], functi
                 'basicDay': 'day',
             };
 
+            // snapp
+            // check isRtl then change calendar
+            var isRtl = Espo.Utils.isRtl();
+            if(isRtl) {
+                this.titleFormat = {
+                    month: 'jMMMM jYYYY',
+                    week: 'jMMMM jD, jYYYY',
+                    day: 'dddd, jMMMM jD, jYYYY'
+                };
+            }
+
+
+
             var viewName = map[view.name] || view.name
 
             var title;
@@ -302,6 +315,10 @@ Espo.define('crm:views/calendar/calendar', ['view', 'lib!full-calendar'], functi
             }
             if (this.options.userId && this.options.userName) {
                 title += ' (' + this.options.userName + ')';
+            }
+
+            if(isRtl){
+                title = moment().format(this.titleFormat[viewName]);
             }
 
             return title;
@@ -718,6 +735,12 @@ Espo.define('crm:views/calendar/calendar', ['view', 'lib!full-calendar'], functi
                 options.contentHeight = this.getCalculatedHeight();
             } else {
                 options.aspectRatio = 1.62;
+            }
+
+            const isRtl = Espo.Utils.isRtl();
+            if(isRtl) {
+                options.isRTL = true;
+                options.isJalaali = true;
             }
 
             if (this.date) {
