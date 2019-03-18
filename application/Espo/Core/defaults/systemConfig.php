@@ -82,6 +82,7 @@ return [
         'systemItems',
         'adminItems',
         'superAdminItems',
+        'superAdminSystemItems',
         'configPath',
         'cachePath',
         'database',
@@ -116,6 +117,13 @@ return [
         'requiredMariadbVersion',
         'recommendedMariadbParams',
         'phpExecutablePath',
+        'webSocketDebugMode',
+        'webSocketSslCertificateFile',
+        'webSocketSslCertificateLocalPrivateKey',
+        'webSocketSslCertificatePassphrase',
+        'webSocketSslAllowSelfSigned',
+        'webSocketUseSecureServer',
+        'webSocketPort',
     ],
     'adminItems' => [
         'devMode',
@@ -202,6 +210,9 @@ return [
         'maintenanceMode',
         'siteUrl',
         'useWebSocket',
+        'webSocketUrl',
+    ],
+    'superAdminSystemItems' => [
     ],
     'userItems' => [
         'outboundEmailFromAddress',

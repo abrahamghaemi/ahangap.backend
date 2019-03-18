@@ -38,10 +38,9 @@ Espo.define('views/admin/settings', 'views/settings/record/edit', function (Dep)
             if (this.getHelper().getAppParam('isRestrictedMode') && !this.getUser().isSuperAdmin()) {
                 this.hideField('cronDisabled');
                 this.hideField('maintenanceMode');
-                this.hideField('useWebSocket');
+                this.setFieldReadOnly('useWebSocket');
                 this.setFieldReadOnly('siteUrl');
             }
-
         }
     });
 });
