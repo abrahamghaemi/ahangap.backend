@@ -69,6 +69,26 @@ Espo.define('views/fields/datetime', 'views/fields/date', function (Dep) {
             }
 
             if (this.mode == 'list' || this.mode == 'detail' || this.mode == 'listLink') {
+
+                if(Espo.Utils.isRtl()) {
+                    moment.loadPersian({usePersianDigits: true, dialect: 'persian-modern'});
+
+                    if (value.substr(0, 4) > 1400) {
+                        if (value.length == 10) {
+                            value = moment(value).format('jYYYY/jMM/jDD');
+                        }else if (value.length > 10) {
+                            // TODO needs 4:30 addition to date ot resolve
+                            // add 4:30 to date resolve time's
+                            value = moment(value).add(270, 'm').format('YYYY/MM/DD hh:mm:ss');
+                            value = moment(value.substring(0, 10)).format('jYYYY/jMM/jDD') + value.substring(10, 20);
+                        }
+                    }
+                    // TODO needs time change to asia tehran
+                    return value;
+
+                    // return this.getDateTime().toDisplayDateTime(value);
+                }
+
                 if (this.getConfig().get('readableDateFormatDisabled') || this.params.useNumericFormat) {
                     return this.getDateTime().toDisplayDateTime(value);
                 }
@@ -133,6 +153,7 @@ Espo.define('views/fields/datetime', 'views/fields/date', function (Dep) {
             Dep.prototype.afterRender.call(this);
 
             if (this.mode == 'edit') {
+                console.log(this.$element);
                 var $date = this.$date = this.$element;
                 var $time = this.$time = this.$el.find('input.time-part');
                 this.initTimepicker();

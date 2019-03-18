@@ -124,6 +124,15 @@ Espo.define('views/login', 'view', function (Dep) {
                             settings: data.settings,
                             appParams: data.appParams
                         });
+
+                        // snapp
+                        // add check language and add to local storage
+                        var language = data.preferences.language;
+                        var isRtl = Espo.Utils.setRtlStatus(language);
+                        if (isRtl) {
+                           // Espo.Utils.addMetaLink()
+                        }
+                        // end snapp
                     }.bind(this),
                     error: function (xhr) {
                         $submit.removeClass('disabled').removeAttr('disabled');

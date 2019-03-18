@@ -34,6 +34,8 @@ use \Espo\ORM\EntityFactory;
 use \Espo\ORM\EntityCollection;
 use \Espo\ORM\Entity;
 use \Espo\ORM\IEntity;
+use duncan3dc\Sessions\Session;
+use Espo\Core\Utils\PersianDate;
 
 
 class RDB extends \Espo\ORM\Repository
@@ -143,6 +145,36 @@ class RDB extends \Espo\ORM\Repository
         if (empty($options['skipBeforeSave']) && empty($options['skipAll'])) {
             $this->beforeSave($entity, $options);
         }
+
+        Session::name("app");
+        $preferences = Session::get('preferences');
+        if($preferences->language === 'fa_IR'){
+            $entityValues = $entity->getValues();
+            $dateStart = $entityValues['dateStart'];
+            if($this->checkDateIsJalali($dateStart)){
+                $dateStart = $this->jalaliToGregorian($dateStart);
+                $entity->set('dateStart', $dateStart);
+            }
+
+            $dateEnd = $entityValues['dateEnd'];
+            if($this->checkDateIsJalali($dateEnd)){
+                $dateEnd = $this->jalaliToGregorian($dateEnd);
+                $entity->set('dateEnd', $dateEnd);
+            }
+
+            $dateStartDate = $entityValues['dateStartDate'];
+            if($this->checkDateIsJalali($dateStartDate)){
+                $dateStartDate = $this->jalaliToGregorian($dateStartDate);
+                $entity->set('dateStartDate', $dateStartDate);
+            }
+
+            $dateEndDate = $entityValues['dateEndDate'];
+            if($this->checkDateIsJalali($dateEndDate)){
+                $dateEndDate = $this->jalaliToGregorian($dateEndDate);
+                $entity->set('dateEndDate', $dateEndDate);
+            }
+        }
+
         if ($entity->isNew() && !$entity->isSaved()) {
             $result = $this->getMapper()->insert($entity);
         } else {
@@ -636,5 +668,35 @@ class RDB extends \Espo\ORM\Repository
     protected function getPDO()
     {
         return $this->getEntityManager()->getPDO();
+    }
+
+    private function  checkDateIsJalali($dateStart)
+    {
+        if($dateStart == '') return false;
+
+        $year = substr($dateStart,0 , 4);
+
+        if($year > 1420) {
+            return false;
+        }
+
+        return true;
+    }
+
+    private function jalaliToGregorian($dateStart)
+    {
+        $date = substr($dateStart,0 , 10);
+        $time = substr($dateStart,10 , 20);
+
+        $date = PersianDate::toGregorian($date);
+
+        $date = explode("-", $date);
+
+        // if month is one char 2 must be change to 02
+        if(strlen($date[1]) == 1) $date[1] = "0" . $date[1];
+
+        // time in persian 64 min biggest default time
+
+        return $date[0] . "-" . $date[1] . "-" . $date[2] .  " " . date('H:i:s', StrToTime($time) - (64*60));
     }
 }

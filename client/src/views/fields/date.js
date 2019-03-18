@@ -146,12 +146,25 @@ Espo.define('views/fields/date', 'views/fields/base', function (Dep) {
                     }
                 }.bind(this));
 
-                var options = {
-                    format: this.getDateTime().dateFormat.toLowerCase(),
-                    weekStart: this.getDateTime().weekStart,
-                    autoclose: true,
-                    todayHighlight: true,
-                };
+                const isRtl = Espo.Utils.isRtl();
+
+                if(isRtl) {
+                    var options = {
+                        format: this.getDateTime().dateFormat.toUpperCase(),
+                        weekStart: this.getDateTime().weekStart,
+                        autoClose: true,
+                        todayHighlight: true,
+                    };
+                } else {
+                    var options = {
+                        format: this.getDateTime().dateFormat.toLowerCase(),
+                        weekStart: this.getDateTime().weekStart,
+                        autoClose: true,
+                        todayHighlight: true,
+                    };
+                }
+
+
 
                 var language = this.getConfig().get('language');
 
@@ -169,23 +182,47 @@ Espo.define('views/fields/date', 'views/fields/base', function (Dep) {
 
                 options.language = language;
 
-                var $datePicker = this.$element.datepicker(options).on('show', function (e) {
-                    $('body > .datepicker.datepicker-dropdown').css('z-index', 1200);
-                }.bind(this));
+                if(isRtl){
+                    var $datePicker = this.$element.pDatepicker(options).on('show', function (e) {
+                        $('body > .datepicker.datepicker-dropdown').css('z-index', 1200);
+                    }.bind(this));
+                } else {
+                    var $datePicker = this.$element.datepicker(options).on('show', function (e) {
+                        $('body > .datepicker.datepicker-dropdown').css('z-index', 1200);
+                    }.bind(this));
+                }
 
                 if (this.mode == 'search') {
                     var $elAdd = this.$el.find('input.additional');
-                    $elAdd.datepicker(options).on('show', function (e) {
-                        $('body > .datepicker.datepicker-dropdown').css('z-index', 1200);
-                    }.bind(this));
-                    $elAdd.parent().find('button.date-picker-btn').on('click', function (e) {
-                        $elAdd.datepicker('show');
-                    });
+
+                    if(isRtl) {
+                        $elAdd.pDatepicker(options).on('show', function (e) {
+                            $('body > .datepicker.datepicker-dropdown').css('z-index', 1200);
+                        }.bind(this));
+                        $elAdd.parent().find('button.date-picker-btn').on('click', function (e) {
+                            $elAdd.pDatepicker('show');
+                        });
+                    } else {
+                        $elAdd.datepicker(options).on('show', function (e) {
+                            $('body > .datepicker.datepicker-dropdown').css('z-index', 1200);
+                        }.bind(this));
+                        $elAdd.parent().find('button.date-picker-btn').on('click', function (e) {
+                            $elAdd.datepicker('show');
+                        });
+                    }
                 }
 
+
+
+            if(isRtl) {
+                this.$element.parent().find('button.date-picker-btn').on('click', function (e) {
+                    this.$element.pDatepicker('show');
+                }.bind(this));
+            } else {
                 this.$element.parent().find('button.date-picker-btn').on('click', function (e) {
                     this.$element.datepicker('show');
                 }.bind(this));
+            }
 
 
                 if (this.mode == 'search') {

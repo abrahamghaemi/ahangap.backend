@@ -147,6 +147,10 @@ Espo.define('crm:views/calendar/timeline', ['view', 'lib!vis'], function (Dep, V
         },
 
         setup: function () {
+            const isRtl = Espo.Utils.isRtl();
+            if(isRtl) {
+                moment.loadPersian();
+            }
             this.date = this.options.date || this.getDateTime().getToday();
             this.mode = this.options.mode || this.defaultMode;
             this.header = ('header' in this.options) ? this.options.header : this.header;
@@ -614,6 +618,17 @@ Espo.define('crm:views/calendar/timeline', ['view', 'lib!vis'], function (Dep, V
                     year: ''
                 }
             };
+
+            const isRtl = Espo.Utils.isRtl();
+            if(isRtl) {
+                format.majorLabels.minute = 'ddd jD jMMMM';
+                format.majorLabels.hour = 'ddd jD jMMMM';
+                format.majorLabels.weekday = 'jMMMM jYYYY';
+                format.majorLabels.day = 'jMMMM jYYYY';
+                format.majorLabels.month = 'jYYYY';
+                format.majorLabels.year = '';
+            }
+
             return format;
         },
 

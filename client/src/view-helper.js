@@ -110,6 +110,26 @@ define('view-helper', [], function () {
         _registerHandlebarsHelpers: function () {
             var self = this;
 
+            Handlebars.registerHelper('jalali', function (date) {
+                var isRtl = Espo.Utils.isRtl();
+
+                if(isRtl){
+                    if (date.substr(0, 4) > 1400) {
+                        if (moment(date).isValid() && date.length > 9) {
+                            if (date.length == 10) {
+                                date = moment(date).format('jYYYY/jMM/jDD');
+                            }
+                            if (date.length > 10) {
+                                date = moment(date.substring(0, 10)).format('jYYYY/jMM/jDD') + date.substring(10, 20);
+                            }
+                        }
+                    }
+                    date = persianJs(date).englishNumber().toString();
+                }
+
+                return date;
+            });
+
             Handlebars.registerHelper('img', function (img) {
                 return new Handlebars.SafeString("<img src=\"img/" + img + "\"></img>");
             });
