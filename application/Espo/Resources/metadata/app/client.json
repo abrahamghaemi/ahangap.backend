@@ -1,6 +1,6 @@
 {
     "scriptList": [
-        "client/espo.min.js"
+        "client/app.min.js"
     ],
     "developerModeScriptList": [
         "client/lib/jquery-2.1.4.min.js",

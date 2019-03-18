@@ -3,6 +3,10 @@
     <head>
         <title>{{applicationName}}</title>
         {{scriptsHtml}}
+
+        <script>
+            var App = Espo;
+        </script>
         <link href="{{basePath}}{{stylesheet}}?r={{cacheTimestamp}}" rel="stylesheet" id='main-stylesheet'>
         <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
         <meta content="utf-8" http-equiv="encoding">
@@ -15,8 +19,9 @@
         <link rel="shortcut icon" href="{{basePath}}client/img/favicon.ico" type="image/x-icon">
         <script type="text/javascript">
             $(function () {
-                Espo.loader.cacheTimestamp = {{loaderCacheTimestamp}};
-                Espo.require('{{appClientClassName}}', function (App) {
+
+                App.loader.cacheTimestamp = {{loaderCacheTimestamp}};
+                App.require('{{appClientClassName}}', function (App) {
                     var app = new App({
                         id: '{{applicationId}}',
                         useCache: {{useCache}},
