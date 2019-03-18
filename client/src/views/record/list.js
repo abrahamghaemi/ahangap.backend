@@ -1446,6 +1446,10 @@ Espo.define('views/record/list', 'view', function (Dep) {
                 var count = modelList.length;
                 var built = 0;
                 modelList.forEach(function (model) {
+                    var isRtl = Espo.Utils.isRtl();
+                    if(isRtl) {
+                        model = this.convertGaritoritojalali(model);
+                    }
                     this.buildRow(i, model, function () {
                         built++;
                         if (built == count) {
@@ -1743,6 +1747,33 @@ Espo.define('views/record/list', 'view', function (Dep) {
             if (this.collection.length == 0 && (this.collection.total == 0 || this.collection.total === -2)) {
                 this.reRender();
             }
+        },
+        convertGaritoritojalali: function (model) {
+            // moment.loadPersian();
+            var kyes = Object.keys(model.attributes);
+            kyes.forEach(function (item) {
+
+                if(model.attributes[item] != null){
+                    var checkIsDate = model.attributes[item].length;
+                }
+
+                if (checkIsDate == 19 || checkIsDate == 10) {
+                    if (moment(model.attributes[item]).isValid() && model.attributes[item].length > 9) {
+                        if (model.attributes[item].length == 10) {
+                            model.attributes[item] = moment(model.attributes[item]).format('jYYYY/jMM/jDD');
+                        }
+                        if (model.attributes[item].length > 10) {
+                            var value = moment(model.attributes[item]).add(270, 'm').format('YYYY/MM/DD hh:mm:ss');
+                            //console.log(value.substring(10, 20), value.substring(0, 10));
+                            model.attributes[item] = moment(value.substring(0, 10)).format('jYYYY/jMM/jDD') + value.substring(10, 20);
+                        }
+                    }
+
+                }
+
+
+            });
+            return model;
         }
     });
 });

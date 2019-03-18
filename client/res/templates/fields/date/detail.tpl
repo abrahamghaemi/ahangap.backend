@@ -1,1 +1,1 @@
-{{dateValue}}
+{{jalali dateValue}}
