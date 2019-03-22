@@ -55,6 +55,10 @@ Espo.define('crm:views/meeting/fields/date-end', 'views/fields/datetime-optional
                     var index = dateTime.indexOf(' ');
                     var time = dateTime.substr(index + 1);
 
+                    const isRtl = Espo.Utils.isRtl();
+                    if (isRtl) {
+                        this.$time = this.$time = this.$el.find('input.time-part');
+                    }
                     this.$time.val(time);
                 }
                 this.trigger('change');

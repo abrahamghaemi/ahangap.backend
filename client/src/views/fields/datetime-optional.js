@@ -92,6 +92,11 @@ Espo.define('views/fields/datetime-optional', 'views/fields/datetime', function 
 
         fetch: function () {
             var data = {};
+            const isRtl = Espo.Utils.isRtl();
+            if (isRtl) {
+                this.$date = this.$el.find('[data-name="' + this.name + '"]');
+                this.$time = this.$time = this.$el.find('input.time-part');
+            }
 
             var date = this.$date.val();
             var time = this.$time.val();

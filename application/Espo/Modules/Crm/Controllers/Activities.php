@@ -29,12 +29,15 @@
 
 namespace Espo\Modules\Crm\Controllers;
 
+
 use \Espo\Core\Exceptions\Error,
     \Espo\Core\Exceptions\Forbidden,
-    \Espo\Core\Exceptions\BadRequest;
+    \Espo\Core\Exceptions\BadRequest,
+    \Espo\Core\Utils\Traits\DateTimeTrait;
 
 class Activities extends \Espo\Core\Controllers\Base
 {
+    use DateTimeTrait;
     protected $maxCalendarRange = 123;
 
     const MAX_SIZE_LIMIT = 200;
@@ -45,8 +48,15 @@ class Activities extends \Espo\Core\Controllers\Base
             throw new Forbidden();
         }
 
-        $from = $request->get('from');
-        $to = $request->get('to');
+
+        $from = $this->traverse_farsi(
+            $request->get('from')
+        );
+        $to = $this->traverse_farsi(
+            $request->get('to')
+        );
+
+
 
         if (empty($from) || empty($to)) {
             throw new BadRequest();
@@ -90,8 +100,12 @@ class Activities extends \Espo\Core\Controllers\Base
             throw new Forbidden();
         }
 
-        $from = $request->get('from');
-        $to = $request->get('to');
+        $from = $this->traverse_farsi(
+            $request->get('from')
+        );
+        $to = $this->traverse_farsi(
+            $request->get('to')
+        );
 
         if (empty($from) || empty($to)) {
             throw new BadRequest();
