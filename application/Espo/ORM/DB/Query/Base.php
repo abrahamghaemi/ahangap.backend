@@ -107,6 +107,7 @@ abstract class Base
         'UPPER',
         'TRIM',
         'LENGTH',
+        'CHAR_LENGTH',
         'YEAR_0',
         'YEAR_1',
         'YEAR_2',
@@ -133,10 +134,31 @@ abstract class Base
         'QUARTER_11',
         'CONCAT',
         'TZ',
+        'ADD',
+        'SUB',
+        'MUL',
+        'DIV',
+        'MOD',
         'FLOOR',
         'CEIL',
         'ROUND',
         'COALESCE',
+        'IF',
+        'LIKE',
+        'NOT_LIKE',
+        'EQUAL',
+        'NOT_EQUAL',
+        'GREATER_THAN',
+        'LESS_THAN',
+        'GREATER_THAN_OR_EQUAL',
+        'LESS_THAN_OR_EQUAL',
+        'IS_NULL',
+        'IS_NOT_NULL',
+        'OR',
+        'AND',
+        'NOT',
+        'IN',
+        'NOT_IN',
     ];
 
     protected $multipleArgumentsFunctionList = [
@@ -144,6 +166,66 @@ abstract class Base
         'TZ',
         'ROUND',
         'COALESCE',
+        'IF',
+        'LIKE',
+        'NOT_LIKE',
+        'EQUAL',
+        'NOT_EQUAL',
+        'GREATER_THAN',
+        'LESS_THAN',
+        'GREATER_THAN_OR_EQUAL',
+        'LESS_THAN_OR_EQUAL',
+        'OR',
+        'AND',
+        'IN',
+        'NOT_IN',
+        'ADD',
+        'SUB',
+        'MUL',
+        'DIV',
+        'MOD',
+    ];
+
+    protected $comparisonFunctionList = [
+        'LIKE',
+        'NOT_LIKE',
+        'EQUAL',
+        'NOT_EQUAL',
+        'GREATER_THAN',
+        'LESS_THAN',
+        'GREATER_THAN_OR_EQUAL',
+        'LESS_THAN_OR_EQUAL',
+    ];
+
+    protected $comparisonFunctionOperatorMap = [
+        'LIKE' => 'LIKE',
+        'NOT_LIKE' => 'NOT LIKE',
+        'EQUAL' => '=',
+        'NOT_EQUAL' => '<>',
+        'GREATER_THAN' => '>',
+        'LESS_THAN' => '<',
+        'GREATER_THAN_OR_EQUAL' => '>=',
+        'LESS_THAN_OR_EQUAL' => '<=',
+        'IS_NULL' => 'IS NULL',
+        'IS_NOT_NULL' => 'IS NOT NULL',
+        'IN' => 'IN',
+        'NOT_IN' => 'NOT IN',
+    ];
+
+    protected $mathFunctionOperatorMap = [
+        'ADD' => '+',
+        'SUB' => '-',
+        'MUL' => '*',
+        'DIV' => '/',
+        'MOD' => '%',
+    ];
+
+    protected $mathOperationFunctionList = [
+        'ADD',
+        'SUB',
+        'MUL',
+        'DIV',
+        'MOD',
     ];
 
     protected $matchFunctionList = ['MATCH_BOOLEAN', 'MATCH_NATURAL_LANGUAGE', 'MATCH_QUERY_EXPANSION'];
@@ -308,7 +390,7 @@ abstract class Base
     protected function getFunctionPart($function, $part, $entityType, $distinct = false, ?array $argumentPartList = null)
     {
         if (!in_array($function, $this->functionList)) {
-            throw new \Exception("Not allowed function '".$function."'.");
+            throw new \Exception("ORM Query: Not allowed function '{$function}'.");
         }
 
         if (strpos($function, 'YEAR_') === 0 && $function !== 'YEAR_NUMBER') {
@@ -340,6 +422,43 @@ abstract class Base
 
         if ($function === 'TZ') {
             return $this->getFunctionPartTZ($entityType, $argumentPartList);
+        }
+
+        if (in_array($function, $this->comparisonFunctionList)) {
+            if (count($argumentPartList) < 2) {
+                throw new \Exception("ORM Query: Not enough arguments for function '{$function}'.");
+            }
+            $operator = $this->comparisonFunctionOperatorMap[$function];
+            return $argumentPartList[0] . ' ' . $operator . ' ' . $argumentPartList[1];
+        }
+
+        if (in_array($function, $this->mathOperationFunctionList)) {
+            if (count($argumentPartList) < 2) {
+                throw new \Exception("ORM Query: Not enough arguments for function '{$function}'.");
+            }
+            $operator = $this->mathFunctionOperatorMap[$function];
+            return '(' . implode(' ' . $operator . ' ', $argumentPartList) . ')';
+        }
+
+        if (in_array($function, ['IN', 'NOT_IN'])) {
+            $operator = $this->comparisonFunctionOperatorMap[$function];
+
+            if (count($argumentPartList) < 2) {
+                throw new \Exception("ORM Query: Not enough arguments for function '{$function}'.");
+            }
+            $operatorArgumentList = $argumentPartList;
+            array_shift($operatorArgumentList);
+
+            return $argumentPartList[0] .  ' ' . $operator . ' (' . implode(', ', $operatorArgumentList) . ')';
+        }
+
+        if (in_array($function, ['IS_NULL', 'IS_NOT_NULL'])) {
+            $operator = $this->comparisonFunctionOperatorMap[$function];
+            return $part . ' ' . $operator;
+        }
+
+        if (in_array($function, ['OR', 'AND'])) {
+            return implode(' ' . $function . ' ', $argumentPartList);
         }
 
         switch ($function) {
@@ -382,6 +501,8 @@ abstract class Base
             case 'DAYOFWEEK_NUMBER':
                 $function = 'DAYOFWEEK';
                 break;
+            case 'NOT':
+                return 'NOT ' . $part;
         }
 
         if ($distinct) {
@@ -1192,8 +1313,8 @@ abstract class Base
 
             if (!preg_match('/^[a-z0-9]+$/i', $field)) {
                 foreach (self::$comparisonOperators as $op => $opDb) {
-                    if (strpos($field, $op) !== false) {
-                        $field = trim(str_replace($op, '', $field));
+                    if (substr($field, -strlen($op)) === $op) {
+                        $field = trim(substr($field, 0, -strlen($op)));
                         $operatorOrm = $op;
                         $operator = $opDb;
                         break;
@@ -1336,12 +1457,14 @@ abstract class Base
                     }
                     $wherePartList[] = $leftPart . " " . $operator . " (" . $this->createSelectQuery($subQueryEntityType, $subQuerySelectParams) . ")";
                 } else if (!is_array($value)) {
-                    if (!is_null($value)) {
-                        if ($isNotValue) {
+                    if ($isNotValue) {
+                        if (!is_null($value)) {
                             $wherePartList[] = $leftPart . " " . $operator . " " . $this->convertComplexExpression($entity, $value, $params);
                         } else {
-                            $wherePartList[] = $leftPart . " " . $operator . " " . $this->pdo->quote($value);
+                            $wherePartList[] = $leftPart;
                         }
+                    } else if (!is_null($value)) {
+                        $wherePartList[] = $leftPart . " " . $operator . " " . $this->pdo->quote($value);
                     } else {
                         if ($operator == '=') {
                             $wherePartList[] = $leftPart . " IS NULL";
@@ -1409,7 +1532,7 @@ abstract class Base
 
     public function sanitizeSelectAlias($string)
     {
-        return preg_replace('/[^A-Za-z0-9_:.,\-\(\)]+/', '', $string);
+        return preg_replace('/[^A-Za-z0-9_:\'" .,\-\(\)]+/', '', $string);
     }
 
     public function sanitizeSelectItem($string)
@@ -1464,8 +1587,8 @@ abstract class Base
 
         if (!preg_match('/^[a-z0-9]+$/i', $left)) {
             foreach (self::$comparisonOperators as $op => $opDb) {
-                if (strpos($left, $op) !== false) {
-                    $left = trim(str_replace($op, '', $left));
+                if (substr($left, -strlen($op)) === $op) {
+                    $left = trim(substr($left, 0, -strlen($op)));
                     $operator = $opDb;
                     break;
                 }

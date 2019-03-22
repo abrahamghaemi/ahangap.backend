@@ -269,7 +269,7 @@ class QueryTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals($expectedSql, $sql);
     }
 
-    public function testWhereNotValue()
+    public function testWhereNotValue1()
     {
         $sql = $this->query->createSelectQuery('Post', [
             'select' => ['id', 'name'],
@@ -281,6 +281,23 @@ class QueryTest extends \PHPUnit\Framework\TestCase
         $expectedSql =
             "SELECT post.id AS `id`, post.name AS `name` FROM `post` " .
             "WHERE post.name <> post.id AND post.deleted = '0'";
+
+        $this->assertEquals($expectedSql, $sql);
+    }
+
+    public function testWhereNotValue2()
+    {
+        $sql = $this->query->createSelectQuery('Post', [
+            'select' => ['id', 'name'],
+            'whereClause' => [
+                'name:' => null
+            ],
+            'withDeleted' => true
+        ]);
+
+        $expectedSql =
+            "SELECT post.id AS `id`, post.name AS `name` FROM `post` " .
+            "WHERE post.name";
 
         $this->assertEquals($expectedSql, $sql);
     }
@@ -604,6 +621,72 @@ class QueryTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals($expectedSql, $sql);
     }
 
+    public function testFunction10()
+    {
+        $sql = $this->query->createSelectQuery('Comment', [
+            'select' => ['id', ["IF:(LIKE:(name,'%test%'),'1','0')", 'value']]
+        ]);
+        $expectedSql =
+            "SELECT comment.id AS `id`, IF(comment.name LIKE '%test%', '1', '0') AS `value` FROM `comment` " .
+            "WHERE comment.deleted = '0'";
+        $this->assertEquals($expectedSql, $sql);
+    }
+
+    public function testFunction11()
+    {
+        $sql = $this->query->createSelectQuery('Comment', [
+            'select' => [["IS_NULL:(name)", 'value1'], ["IS_NOT_NULL:(name)", 'value2']],
+            'withDeleted' => true
+        ]);
+        $expectedSql =
+            "SELECT comment.name IS NULL AS `value1`, comment.name IS NOT NULL AS `value2` FROM `comment`";
+        $this->assertEquals($expectedSql, $sql);
+    }
+
+    public function testFunction12()
+    {
+        $sql = $this->query->createSelectQuery('Comment', [
+            'select' => ["IF:(OR:('1','0'),'1',' ')"],
+            'withDeleted' => true
+        ]);
+        $expectedSql =
+            "SELECT IF('1' OR '0', '1', ' ') AS `IF:(OR:('1','0'),'1',' ')` FROM `comment`";
+        $this->assertEquals($expectedSql, $sql);
+    }
+
+    public function testFunction13()
+    {
+        $sql = $this->query->createSelectQuery('Comment', [
+            'select' => ["IN:(name,'1','0')"],
+            'withDeleted' => true
+        ]);
+        $expectedSql =
+            "SELECT comment.name IN ('1', '0') AS `IN:(name,'1','0')` FROM `comment`";
+        $this->assertEquals($expectedSql, $sql);
+    }
+
+    public function testFunction14()
+    {
+        $sql = $this->query->createSelectQuery('Comment', [
+            'select' => ["NOT:(name)"],
+            'withDeleted' => true
+        ]);
+        $expectedSql =
+            "SELECT NOT comment.name AS `NOT:(name)` FROM `comment`";
+        $this->assertEquals($expectedSql, $sql);
+    }
+
+    public function testFunction15()
+    {
+        $sql = $this->query->createSelectQuery('Comment', [
+            'select' => ["MUL:(2,2.5,SUB:(3,1))"],
+            'withDeleted' => true
+        ]);
+        $expectedSql =
+            "SELECT ('2' * '2.5' * ('3' - '1')) AS `MUL:(2,2.5,SUB:(3,1))` FROM `comment`";
+        $this->assertEquals($expectedSql, $sql);
+    }
+
     public function testFunctionTZ1()
     {
         $sql = $this->query->createSelectQuery('Comment', [
@@ -648,6 +731,23 @@ class QueryTest extends \PHPUnit\Framework\TestCase
             "WHERE post.created_by_id = 'id_1' AND comment.deleted = '0' " .
             "GROUP BY comment.post_id " .
             "HAVING COUNT(comment.id) > '1'";
+        $this->assertEquals($expectedSql, $sql);
+    }
+
+    public function testWhere1()
+    {
+        $sql = $this->query->createSelectQuery('Comment', [
+            'select' => ['id'],
+            'whereClause' => [
+                'post.createdById<=' => '1'
+            ],
+            'withDeleted' => true
+        ]);
+
+        $expectedSql =
+            "SELECT comment.id AS `id` " .
+            "FROM `comment` " .
+            "WHERE post.created_by_id <= '1'";
         $this->assertEquals($expectedSql, $sql);
     }
 
