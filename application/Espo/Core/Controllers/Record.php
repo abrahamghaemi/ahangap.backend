@@ -33,10 +33,13 @@ use \Espo\Core\Exceptions\Error;
 use \Espo\Core\Exceptions\Forbidden;
 use \Espo\Core\Exceptions\NotFound;
 use \Espo\Core\Exceptions\BadRequest;
+use Espo\Core\Utils\Traits\DateTimeTrait;
 use \Espo\Core\Utils\Util;
+
 
 class Record extends Base
 {
+    use DateTimeTrait;
     const MAX_SIZE_LIMIT = 200;
 
     public static $defaultAction = 'list';
@@ -92,6 +95,8 @@ class Record extends Base
         }
 
         $service = $this->getRecordService();
+
+        $data = $this->normlizationDate($data);
 
         if ($entity = $service->create($data)) {
             return $entity->getValueMap();

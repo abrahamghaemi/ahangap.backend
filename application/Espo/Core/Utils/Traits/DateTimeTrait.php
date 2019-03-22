@@ -3,13 +3,27 @@
 namespace Espo\Core\Utils\Traits;
 
 trait DateTimeTrait {
-    public function traverse_farsi($str){
+    public function traverse_farsi($str) : string  {
         $farsi_chars = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
         $latin_chars = ['0', '1','2','3','4','5','6','7','8','9'];
         return str_replace($farsi_chars, $latin_chars, $str);
     }
 
-    public function  checkDateIsJalali($dateStart)
+    public function normlizationDate($data): object
+    {
+
+        $data = (array) $data;
+
+        foreach ( $data as $key => $item){
+            if($key == 'dateStart' || $key == 'dateEnd') {
+                $data[$key] = $this->traverse_farsi($item);
+            }
+        }
+
+        return (object) $data;
+    }
+
+    public function  checkDateIsJalali($dateStart): bool
     {
         if($dateStart == '') return false;
 
@@ -22,7 +36,7 @@ trait DateTimeTrait {
         return true;
     }
 
-    public function jalaliToGregorian($dateStart)
+    public function jalaliToGregorian($dateStart): string
     {
         $date = substr($dateStart,0 , 10);
         $time = substr($dateStart,10 , 20);
