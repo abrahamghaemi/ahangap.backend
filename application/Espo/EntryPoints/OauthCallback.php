@@ -39,7 +39,7 @@ class OauthCallback extends \Espo\Core\EntryPoints\Base
 
     public function run()
     {
-        echo "EspoCRM rocks !!!";
+        echo "SnappyCRM !!!";
     }
 }
 
