@@ -1,0 +1,11 @@
+[
+    {
+        "route": "track/:id/stream",
+        "method": "get",
+        "params": {
+            "controller": "Track",
+            "action": "stream",
+            "id": "id"
+        }
+    }
+]
