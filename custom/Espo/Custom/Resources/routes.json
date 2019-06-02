@@ -5,7 +5,7 @@
         "params": {
             "controller": "Track",
             "action": "stream",
-            "id": "id"
+            "id": ":id"
         }
     }
 ]
