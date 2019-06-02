@@ -9,7 +9,7 @@ class Track extends \Espo\Core\Templates\Controllers\Base
     public function actionStream($params, $data, $request)
     {
         $id = $params['id'];
-        $entity = $this->getRecordService()->read($id);
+        $entity = $this->getRecordService()->stream($id);
 
         if (!$entity) {
             throw new NotFound();

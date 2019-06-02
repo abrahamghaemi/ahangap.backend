@@ -289,6 +289,20 @@ class Record extends \Espo\Core\Services\Base
         return $entity;
     }
 
+    public function stream($id)
+    {
+        if (empty($id)) {
+            throw new Error();
+        }
+        $entity = $this->getEntity($id);
+
+        if (!$entity) throw new NotFound();
+
+        $this->processActionHistoryRecord('stream', $entity);
+
+        return $entity;
+    }
+
     public function getEntity($id = null)
     {
         if (!is_null($id)) {
