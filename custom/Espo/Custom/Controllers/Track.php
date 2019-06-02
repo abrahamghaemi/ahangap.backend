@@ -21,11 +21,20 @@ class Track extends \Espo\Core\Templates\Controllers\Base
 
         $file = '/home/apps/music/repository' . $file;
 
+
+		header('Transfer-Encoding: chunked');
+		header('Pragma: public');
+		header("Content-Transfer-Encoding: binary\n");
+		header('Cache-Control: public, must-revalidate, max-age=0');
         header('Content-type: audio/aac');
+        header('accept-ranges: bytes');
         header('Content-length: ' . filesize($file));
         header('Content-Disposition: filename="' . $entity->get('name'));
-        header('X-Pad: avoid browser bug');
-        header('Cache-Control: no-cache');
-        readfile($file);
+		header('Connection: close');
+		ob_clean();
+		flush();
+
+        echo readfile($file);
+		die;
     }
 }
