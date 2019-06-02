@@ -1,0 +1,36 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "simplename"
+                }
+            ],
+            [
+                {
+                    "name": "appId"
+                },
+                {
+                    "name": "translate"
+                }
+            ],
+            [
+                {
+                    "name": "cover"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "description",
+                    "fullWidth": true
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]

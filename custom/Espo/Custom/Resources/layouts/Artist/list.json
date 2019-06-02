@@ -1,0 +1,15 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "simplename"
+    },
+    {
+        "name": "translate"
+    },
+    {
+        "name": "appId"
+    }
+]

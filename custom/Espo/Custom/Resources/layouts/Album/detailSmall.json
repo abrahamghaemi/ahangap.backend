@@ -1,0 +1,28 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "translate"
+                },
+                {
+                    "name": "name"
+                }
+            ],
+            [
+                {
+                    "name": "cover",
+                    "fullWidth": true
+                }
+            ],
+            [
+                {
+                    "name": "artist",
+                    "fullWidth": true
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]

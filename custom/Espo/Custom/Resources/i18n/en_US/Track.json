@@ -1,0 +1,45 @@
+{
+    "fields": {
+        "name": "title",
+        "img": "Img",
+        "trackUrl": "Track Url",
+        "downloadUrl": "Download Url",
+        "isDownload": "IsDownload",
+        "lyric": "Lyric",
+        "categories": "Categories",
+        "arrangement": "Arrangement",
+        "likes": "Likes",
+        "dislikes": "Dislikes",
+        "plays": "Plays",
+        "translate": "Translate",
+        "duration": "Duration",
+        "stream": "Stream",
+        "artist": "Artist",
+        "artists": "Artists",
+        "segmentlist": "Segment_list",
+        "published": "Published",
+        "discover": "Discover",
+        "genres": "Genres",
+        "genre": "Genres",
+        "playlists": "Playlists"
+    },
+    "links": {
+        "categories": "Categories",
+        "artists": "Artists",
+        "discover": "Discover",
+        "genre": "Genres",
+        "playlists": "Playlists"
+    },
+    "labels": {
+        "Create Track": "Create Track"
+    },
+    "options": {
+        "genres": {
+            "Pop": " پاپ",
+            "Jazz": "جاز",
+            "Rock": "راک",
+            "Folk": "محلی",
+            "Rap": "رپ"
+        }
+    }
+}

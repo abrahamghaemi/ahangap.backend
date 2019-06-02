@@ -1,0 +1,33 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "genres"
+    },
+    {
+        "name": "img"
+    },
+    {
+        "name": "artists"
+    },
+    {
+        "name": "likes"
+    },
+    {
+        "name": "artist"
+    },
+    {
+        "name": "translate"
+    },
+    {
+        "name": "duration"
+    },
+    {
+        "name": "isDownload"
+    },
+    {
+        "name": "trackUrl"
+    }
+]

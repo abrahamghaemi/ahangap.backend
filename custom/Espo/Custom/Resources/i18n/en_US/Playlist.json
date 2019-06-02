@@ -1,0 +1,22 @@
+{
+    "fields": {
+        "private": "Private",
+        "genre": "Genre",
+        "cover": "Cover",
+        "releaseDate": "Release date",
+        "tags": "Tags",
+        "member": "Member",
+        "tracks": "Tracks"
+    },
+    "links": {
+        "member": "Member",
+        "tracks": "Tracks"
+    },
+    "labels": {
+        "Create Playlist": "Create Playlist"
+    },
+    "options": {
+        "genre": [],
+        "tags": []
+    }
+}

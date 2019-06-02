@@ -1,0 +1,56 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "description"
+                },
+                false
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "private"
+                },
+                {
+                    "name": "releaseDate"
+                }
+            ],
+            [
+                {
+                    "name": "genre"
+                },
+                {
+                    "name": "tags"
+                }
+            ]
+        ],
+        "style": "info",
+        "dynamicLogicVisible": null,
+        "customLabel": "Details"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "cover",
+                    "fullWidth": true
+                }
+            ]
+        ],
+        "style": "primary",
+        "dynamicLogicVisible": null,
+        "customLabel": "Cover"
+    }
+]

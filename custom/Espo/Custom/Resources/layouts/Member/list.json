@@ -1,0 +1,15 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "lastName"
+    },
+    {
+        "name": "firstName"
+    },
+    {
+        "name": "playlist"
+    }
+]

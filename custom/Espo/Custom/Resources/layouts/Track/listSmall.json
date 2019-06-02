@@ -1,0 +1,23 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "artist"
+    },
+    {
+        "name": "translate"
+    },
+    {
+        "name": "img",
+        "width": 10,
+        "notSortable": true,
+        "align": "left"
+    },
+    {
+        "name": "trackUrl",
+        "link": true,
+        "align": "left"
+    }
+]

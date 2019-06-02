@@ -1,0 +1,16 @@
+{
+    "fields": {
+        "userName": "UserName",
+        "password": "Password",
+        "avatar": "Avatar",
+        "firstName": "FirstName",
+        "lastName": "LastName",
+        "playlist": "Playlist"
+    },
+    "links": {
+        "playlist": "Playlist"
+    },
+    "labels": {
+        "Create Member": "Create Member"
+    }
+}

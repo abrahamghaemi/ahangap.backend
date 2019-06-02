@@ -1,0 +1,22 @@
+{
+    "scopeNames": {
+        "Categories": "Categories",
+        "Genres": "Genres",
+        "Artist": "Artist",
+        "Track": "Track",
+        "Album": "Album",
+        "Discover": "Discover",
+        "Playlist": "Playlist",
+        "Member": "Member"
+    },
+    "scopeNamesPlural": {
+        "Categories": "Categoriess",
+        "Genres": "Genres",
+        "Artist": "Artists",
+        "Track": "Tracks",
+        "Album": "Albums",
+        "Discover": "Discovers",
+        "Playlist": "Playlists",
+        "Member": "Members"
+    }
+}

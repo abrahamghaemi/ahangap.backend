@@ -1,0 +1,42 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name",
+                    "fullWidth": true
+                }
+            ],
+            [
+                {
+                    "name": "img"
+                },
+                {
+                    "name": "isComedy"
+                }
+            ],
+            [
+                {
+                    "name": "listenerCount"
+                },
+                {
+                    "name": "token"
+                }
+            ],
+            [
+                {
+                    "name": "translate"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "description",
+                    "fullWidth": true
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]

@@ -1,0 +1,21 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "token"
+    },
+    {
+        "name": "isComedy"
+    },
+    {
+        "name": "translate"
+    },
+    {
+        "name": "img",
+        "width": 10,
+        "notSortable": true,
+        "align": "left"
+    }
+]

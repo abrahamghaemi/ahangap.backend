@@ -1,0 +1,18 @@
+{
+    "fields": {
+        "img": "Img",
+        "appId": "App Id",
+        "simplename": "Simple Name",
+        "translate": "Translate",
+        "albums": "Albums",
+        "tracks": "Tracks",
+        "cover": "Cover"
+    },
+    "links": {
+        "albums": "Albums",
+        "tracks": "Tracks"
+    },
+    "labels": {
+        "Create Artist": "Create Artist"
+    }
+}
