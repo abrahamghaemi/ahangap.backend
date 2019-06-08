@@ -25,5 +25,14 @@
             "action": "like",
             "id": ":id"
         }
+    },
+    {
+        "route": "track/:id/liked",
+        "method": "put",
+        "params": {
+            "controller": "Track",
+            "action": "like",
+            "id": ":id"
+        }
     }
 ]

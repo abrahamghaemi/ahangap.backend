@@ -37,4 +37,20 @@ class Track extends \Espo\Core\Templates\Controllers\Base
         echo readfile($file);
 		die;
     }
+
+    public function actionLike($params, $data, $request)
+    {
+        $id = $params['id'];
+        $entity = $this->getRecordService()->read($id);
+        $like = $entity->get('likes');
+
+        $like = (int) $like + 1;
+        $d['likes'] = $like;
+
+        if ($entity = $this->getRecordService()->update($id, $d)) {
+            return $entity->getValueMap();
+        }
+
+        throw new Error();
+    }
 }
