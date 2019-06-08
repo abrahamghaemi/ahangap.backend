@@ -17,7 +17,7 @@ class Episode extends \Espo\Core\Templates\Controllers\Base
             $entity->get('stream'), PHP_URL_PATH
         );
 
-        $file = '/home/apps/music/repository/podcast/stream/' . $file;
+        $file = '/home/apps/music/repository' . $file;
 
 
         header('Transfer-Encoding: chunked');
