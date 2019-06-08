@@ -7,5 +7,14 @@
             "action": "stream",
             "id": ":id"
         }
+    },
+    {
+        "route": "episode/:id/stream",
+        "method": "get",
+        "params": {
+            "controller": "Episode",
+            "action": "stream",
+            "id": ":id"
+        }
     }
 ]
