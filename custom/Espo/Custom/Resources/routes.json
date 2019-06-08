@@ -16,5 +16,14 @@
             "action": "stream",
             "id": ":id"
         }
+    },
+    {
+        "route": "episode/:id/liked",
+        "method": "get",
+        "params": {
+            "controller": "Episode",
+            "action": "like",
+            "id": ":id"
+        }
     }
 ]

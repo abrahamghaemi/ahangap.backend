@@ -35,4 +35,20 @@ class Episode extends \Espo\Core\Templates\Controllers\Base
         echo readfile($file);
         die;
     }
+
+    public function actionLike($params, $data, $request)
+    {
+        $id = $params['id'];
+        $entity = $this->getEntityManager()->read($id);
+        $like = $entity->get('liked');
+        $like += $like;
+
+        $data['liked'] = $like;
+
+        if ($entity = $this->getRecordService()->update($id, $data)) {
+            return $entity->getValueMap();
+        }
+
+        throw new Error();
+    }
 }
