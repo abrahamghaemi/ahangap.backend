@@ -1,0 +1,10 @@
+{
+    "fields": {
+        "tracks": "Tracks",
+        "episodes": "Episodes"
+    },
+    "links": {
+        "tracks": "Tracks",
+        "episodes": "Episodes"
+    }
+}

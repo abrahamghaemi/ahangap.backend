@@ -1,0 +1,38 @@
+{
+    "fields": {
+        "tracks": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
+        },
+        "episodes": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "tracks": {
+            "type": "hasMany",
+            "relationName": "likeTrack",
+            "foreign": "users",
+            "entity": "Track",
+            "audited": false,
+            "isCustom": true
+        },
+        "episodes": {
+            "type": "hasMany",
+            "relationName": "likeEpisode",
+            "foreign": "users",
+            "entity": "Episode",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

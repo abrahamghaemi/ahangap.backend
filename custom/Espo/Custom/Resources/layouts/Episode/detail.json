@@ -1,0 +1,93 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "episodeCategory"
+                }
+            ],
+            [
+                {
+                    "name": "dislikes"
+                },
+                {
+                    "name": "likes"
+                }
+            ],
+            [
+                {
+                    "name": "playcount"
+                },
+                {
+                    "name": "downloadcount"
+                }
+            ],
+            [
+                {
+                    "name": "private"
+                },
+                {
+                    "name": "website"
+                }
+            ],
+            [
+                {
+                    "name": "author"
+                },
+                {
+                    "name": "releasedate"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                },
+                {
+                    "name": "update"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "channel"
+                },
+                {
+                    "name": "duration"
+                }
+            ],
+            [
+                {
+                    "name": "hLS"
+                },
+                {
+                    "name": "stream"
+                }
+            ],
+            [
+                {
+                    "name": "trackUrl"
+                },
+                {
+                    "name": "trackcover"
+                }
+            ],
+            [
+                {
+                    "name": "url",
+                    "fullWidth": true
+                }
+            ]
+        ],
+        "style": "success",
+        "dynamicLogicVisible": null,
+        "customLabel": "links"
+    }
+]

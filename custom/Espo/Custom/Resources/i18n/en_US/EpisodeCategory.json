@@ -1,0 +1,15 @@
+{
+    "fields": {
+        "translate": "Translate",
+        "count": "Count",
+        "episodes": "Episodes",
+        "channels": "Channels"
+    },
+    "links": {
+        "episodes": "Episodes",
+        "channels": "Channels"
+    },
+    "labels": {
+        "Create EpisodeCategory": "Create EpisodeCategory"
+    }
+}
