@@ -7,16 +7,26 @@
         "Album": "Album",
         "Discover": "Discover",
         "Playlist": "Playlist",
-        "Member": "Member"
+        "Member": "Member",
+        "Channel": "Channel",
+        "Episode": "Episode",
+        "Greptor": "Greptor",
+        "EpisodeCategory": "EpisodeCategory",
+        "OtpManager": "OtpManager"
     },
     "scopeNamesPlural": {
-        "Categories": "Categoriess",
+        "Categories": "Categories",
         "Genres": "Genres",
         "Artist": "Artists",
         "Track": "Tracks",
         "Album": "Albums",
         "Discover": "Discovers",
         "Playlist": "Playlists",
-        "Member": "Members"
+        "Member": "Members",
+        "Channel": "Channels",
+        "Episode": "Episodes",
+        "Greptor": "Greptors",
+        "EpisodeCategory": "EpisodeCategories",
+        "OtpManager": "OtpManagers"
     }
 }

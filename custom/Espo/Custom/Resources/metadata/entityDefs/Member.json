@@ -46,11 +46,12 @@
         },
         "password": {
             "type": "varchar",
-            "required": true,
+            "required": false,
             "default": null,
             "maxLength": null,
             "options": [],
-            "isCustom": true
+            "isCustom": true,
+            "trim": false
         },
         "avatar": {
             "type": "url",
@@ -72,8 +73,13 @@
             "options": [],
             "isCustom": true
         },
-        "playlist": {
-            "type": "link"
+        "playlists": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
         }
     },
     "links": {
@@ -95,9 +101,10 @@
             "relationName": "EntityTeam",
             "layoutRelationshipsDisabled": true
         },
-        "playlist": {
-            "type": "belongsTo",
-            "foreign": "member",
+        "playlists": {
+            "type": "hasMany",
+            "relationName": "memberPlaylist",
+            "foreign": "members",
             "entity": "Playlist",
             "audited": true,
             "isCustom": true

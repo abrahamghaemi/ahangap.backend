@@ -6,11 +6,13 @@
         "releaseDate": "Release date",
         "tags": "Tags",
         "member": "Member",
-        "tracks": "Tracks"
+        "tracks": "Tracks",
+        "members": "Members"
     },
     "links": {
         "member": "Member",
-        "tracks": "Tracks"
+        "tracks": "Tracks",
+        "members": "Members"
     },
     "labels": {
         "Create Playlist": "Create Playlist"

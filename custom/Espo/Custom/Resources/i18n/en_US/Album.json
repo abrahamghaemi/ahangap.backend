@@ -2,10 +2,12 @@
     "fields": {
         "translate": "Translate",
         "cover": "Cover",
-        "artist": "Artist"
+        "artist": "Artist",
+        "tracks": "Tracks"
     },
     "links": {
-        "artist": "Artist"
+        "artist": "Artist",
+        "tracks": "Tracks"
     },
     "labels": {
         "Create Album": "Create Album"

@@ -181,6 +181,17 @@
             "importDisabled": false,
             "noLoad": false,
             "isCustom": true
+        },
+        "album": {
+            "type": "link"
+        },
+        "users": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
         }
     },
     "links": {
@@ -236,6 +247,21 @@
             "relationName": "playlistTrack",
             "foreign": "tracks",
             "entity": "Playlist",
+            "audited": false,
+            "isCustom": true
+        },
+        "album": {
+            "type": "belongsTo",
+            "foreign": "tracks",
+            "entity": "Album",
+            "audited": false,
+            "isCustom": true
+        },
+        "users": {
+            "type": "hasMany",
+            "relationName": "likeTrack",
+            "foreign": "tracks",
+            "entity": "User",
             "audited": false,
             "isCustom": true
         }

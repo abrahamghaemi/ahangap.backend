@@ -50,6 +50,14 @@
         },
         "artist": {
             "type": "link"
+        },
+        "tracks": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "noLoad": false,
+            "importDisabled": false,
+            "isCustom": true
         }
     },
     "links": {
@@ -80,6 +88,13 @@
             "type": "belongsTo",
             "foreign": "albums",
             "entity": "Artist",
+            "audited": false,
+            "isCustom": true
+        },
+        "tracks": {
+            "type": "hasMany",
+            "foreign": "album",
+            "entity": "Track",
             "audited": false,
             "isCustom": true
         }

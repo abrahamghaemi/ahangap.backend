@@ -21,14 +21,18 @@
         "discover": "Discover",
         "genres": "Genres",
         "genre": "Genres",
-        "playlists": "Playlists"
+        "playlists": "Playlists",
+        "album": "Album",
+        "users": "Users"
     },
     "links": {
         "categories": "Categories",
         "artists": "Artists",
         "discover": "Discover",
         "genre": "Genres",
-        "playlists": "Playlists"
+        "playlists": "Playlists",
+        "album": "Album",
+        "users": "Users"
     },
     "labels": {
         "Create Track": "Create Track"

@@ -76,15 +76,15 @@
             "maxCount": null,
             "isCustom": true
         },
-        "member": {
+        "tracks": {
             "type": "linkMultiple",
             "layoutDetailDisabled": false,
             "layoutMassUpdateDisabled": false,
-            "noLoad": false,
             "importDisabled": false,
+            "noLoad": false,
             "isCustom": true
         },
-        "tracks": {
+        "members": {
             "type": "linkMultiple",
             "layoutDetailDisabled": false,
             "layoutMassUpdateDisabled": false,
@@ -112,19 +112,20 @@
             "relationName": "EntityTeam",
             "layoutRelationshipsDisabled": true
         },
-        "member": {
-            "type": "hasMany",
-            "foreign": "playlist",
-            "entity": "Member",
-            "audited": false,
-            "isCustom": true
-        },
         "tracks": {
             "type": "hasMany",
             "relationName": "playlistTrack",
             "foreign": "playlists",
             "entity": "Track",
             "audited": false,
+            "isCustom": true
+        },
+        "members": {
+            "type": "hasMany",
+            "relationName": "memberPlaylist",
+            "foreign": "playlists",
+            "entity": "Member",
+            "audited": true,
             "isCustom": true
         }
     },

@@ -3,5 +3,7 @@
     "boolFilterList": [
         "onlyMy"
     ],
-    "iconClass": "far fa-smile"
+    "iconClass": "far fa-smile",
+    "kanbanViewMode": false,
+    "color": "#a3a3a3"
 }

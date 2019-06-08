@@ -5,10 +5,12 @@
         "avatar": "Avatar",
         "firstName": "FirstName",
         "lastName": "LastName",
-        "playlist": "Playlist"
+        "playlist": "Playlist",
+        "playlists": "Playlists"
     },
     "links": {
-        "playlist": "Playlist"
+        "playlist": "Playlist",
+        "playlists": "Playlists"
     },
     "labels": {
         "Create Member": "Create Member"
