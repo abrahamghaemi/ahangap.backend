@@ -14,7 +14,7 @@ class Episode extends \Espo\Core\Templates\Controllers\Base
         }
 
         $file = parse_url(
-            $entity->get('stream'), PHP_URL_PATH
+            $entity->get('trackUrl'), PHP_URL_PATH
         );
 
         $file = '/home/apps/music/repository' . $file;
