@@ -39,13 +39,13 @@ class Episode extends \Espo\Core\Templates\Controllers\Base
     public function actionLike($params, $data, $request)
     {
         $id = $params['id'];
-        $entity = $this->getEntityManager()->read($id);
-        $like = $entity->get('liked');
-        $like += $like;
+        $entity = $this->getRecordService()->read($id);
+        $like = $entity->get('likes');
 
-        $data['liked'] = $like;
+        $like = (int) $like + 1;
+        $d['likes'] = $like;
 
-        if ($entity = $this->getRecordService()->update($id, $data)) {
+        if ($entity = $this->getRecordService()->update($id, $d)) {
             return $entity->getValueMap();
         }
 

@@ -19,7 +19,7 @@
     },
     {
         "route": "episode/:id/liked",
-        "method": "get",
+        "method": "put",
         "params": {
             "controller": "Episode",
             "action": "like",
