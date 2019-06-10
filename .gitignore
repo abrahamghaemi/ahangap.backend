@@ -19,3 +19,6 @@ vendor/
 /client/app.min.js
 /application/Espo/Modules/*
 /client/modules/advanced/*
+/client/modules/google/*
+/client/modules/mail-chimp/*
+/client/modules/sales/*
