@@ -15,3 +15,7 @@ npm-debug.log
 /tests/integration/config.php
 composer.phar
 vendor/
+
+/client/app.min.js
+/application/Espo/Modules/*
+/client/modules/advanced/*
