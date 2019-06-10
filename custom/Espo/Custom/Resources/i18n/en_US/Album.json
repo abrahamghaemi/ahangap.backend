@@ -1,9 +1,10 @@
 {
     "fields": {
         "translate": "Translate",
-        "cover": "Cover",
         "artist": "Artist",
-        "tracks": "Tracks"
+        "tracks": "Tracks",
+        "cover": "Cover",
+        "artistName": "Artist name"
     },
     "links": {
         "artist": "Artist",

@@ -1,4 +1,7 @@
 [
     "translate",
+    "artistName",
+    "tracks",
+    "artist",
     "name"
 ]

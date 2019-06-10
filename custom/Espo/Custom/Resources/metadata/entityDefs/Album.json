@@ -42,12 +42,6 @@
             "options": [],
             "isCustom": true
         },
-        "cover": {
-            "type": "image",
-            "previewSize": "medium",
-            "maxFileSize": null,
-            "isCustom": true
-        },
         "artist": {
             "type": "link"
         },
@@ -57,6 +51,19 @@
             "layoutMassUpdateDisabled": false,
             "noLoad": false,
             "importDisabled": false,
+            "isCustom": true
+        },
+        "cover": {
+            "type": "url",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "artistName": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
             "isCustom": true
         }
     },
@@ -78,11 +85,6 @@
             "entity": "Team",
             "relationName": "EntityTeam",
             "layoutRelationshipsDisabled": true
-        },
-        "cover": {
-            "type": "belongsTo",
-            "entity": "Attachment",
-            "skipOrmDefs": true
         },
         "artist": {
             "type": "belongsTo",

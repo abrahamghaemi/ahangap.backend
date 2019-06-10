@@ -4,9 +4,12 @@
         "link": true
     },
     {
-        "name": "translate"
+        "name": "artistName"
     },
     {
         "name": "artist"
+    },
+    {
+        "name": "cover"
     }
 ]

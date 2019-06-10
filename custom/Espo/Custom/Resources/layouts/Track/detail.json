@@ -11,6 +11,14 @@
             ],
             [
                 {
+                    "name": "albumName"
+                },
+                {
+                    "name": "albumId"
+                }
+            ],
+            [
+                {
                     "name": "published"
                 },
                 {

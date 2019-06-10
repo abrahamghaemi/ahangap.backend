@@ -1,5 +1,11 @@
 [
     "assignedUser",
+    "albumName",
+    "artists",
+    "genre",
+    "artist",
+    "albumId",
+    "album",
     "genres",
     "teams"
 ]

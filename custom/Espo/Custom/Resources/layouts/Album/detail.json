@@ -11,6 +11,14 @@
             ],
             [
                 {
+                    "name": "artistName"
+                },
+                {
+                    "name": "artist"
+                }
+            ],
+            [
+                {
                     "name": "cover"
                 },
                 false

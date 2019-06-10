@@ -23,7 +23,9 @@
         "genre": "Genres",
         "playlists": "Playlists",
         "album": "Album",
-        "users": "Users"
+        "users": "Users",
+        "albumName": "Album name",
+        "albumId": "Album id"
     },
     "links": {
         "categories": "Categories",

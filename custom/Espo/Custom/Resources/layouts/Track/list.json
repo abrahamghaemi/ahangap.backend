@@ -4,10 +4,13 @@
         "link": true
     },
     {
-        "name": "genres"
+        "name": "albumId"
     },
     {
-        "name": "img"
+        "name": "album"
+    },
+    {
+        "name": "genres"
     },
     {
         "name": "artists"
@@ -26,8 +29,5 @@
     },
     {
         "name": "isDownload"
-    },
-    {
-        "name": "trackUrl"
     }
 ]
