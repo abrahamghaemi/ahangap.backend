@@ -71,6 +71,13 @@ class Track extends \Espo\Core\Templates\Controllers\Base
             throw new Forbidden("Max size should should not exceed " . $maxSizeLimit . ". Use offset and limit.");
         }
 
+
+        $where = [[
+            "type" => "lastSevenDays",
+            "attribute" => "publishedDate"
+        ]];
+        $params['where'] = $where;
+
         $result = $this->getRecordService()->find($params);
 
         if (is_array($result)) {
