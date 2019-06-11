@@ -56,32 +56,33 @@ class Track extends \Espo\Core\Templates\Controllers\Base
 
     public function actionNew($params, $data, $request)
     {
+        $params = [];
+        $this->fetchListParamsFromRequest($params, $request, $data);
         $where = [[
             "type" => "lastSevenDays",
             "attribute" => "publishedDate"
         ]];
         $params['where'] = $where;
 
-        return $this->getListOfTrack($params, $data, $request);
+        return $this->getListOfTrack($params);
     }
 
     public function actionPopular($params, $data, $request)
     {
+        $params = [];
+        $this->fetchListParamsFromRequest($params, $request, $data);
         $params['orderBy'] = "likes";
         $params['order'] = "desc";
 
-        return $this->getListOfTrack($params, $data, $request);
+        return $this->getListOfTrack($params);
     }
 
 
-    public function getListOfTrack($params, $data, $request)
+    public function getListOfTrack($params)
     {
         if (!$this->getAcl()->check($this->name, 'read')) {
             throw new Forbidden();
         }
-
-        $params = [];
-        $this->fetchListParamsFromRequest($params, $request, $data);
 
         $maxSizeLimit = $this->getConfig()->get('recordListMaxSizeLimit', self::MAX_SIZE_LIMIT);
         if (empty($params['maxSize'])) {
