@@ -42,5 +42,13 @@
             "controller": "Track",
             "action": "new"
         }
+    },
+    {
+        "route": "track/popular",
+        "method": "get",
+        "params": {
+            "controller": "Track",
+            "action": "popular"
+        }
     }
 ]
