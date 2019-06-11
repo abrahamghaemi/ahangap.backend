@@ -58,9 +58,11 @@ class Track extends \Espo\Core\Templates\Controllers\Base
     {
         $params = [];
         $this->fetchListParamsFromRequest($params, $request, $data);
+        // where[0][type]=lastXDays&where[0][attribute]=publishedDate&where[0][value]=30
         $where = [[
-            "type" => "lastSevenDays",
-            "attribute" => "publishedDate"
+            "type" => "lastXDays",
+            "attribute" => "publishedDate",
+            "value" => 30
         ]];
         $params['where'] = $where;
 
