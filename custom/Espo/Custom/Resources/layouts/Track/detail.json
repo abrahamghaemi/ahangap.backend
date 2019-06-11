@@ -27,6 +27,12 @@
             ],
             [
                 {
+                    "name": "publishedDate"
+                },
+                false
+            ],
+            [
+                {
                     "name": "likes"
                 },
                 {

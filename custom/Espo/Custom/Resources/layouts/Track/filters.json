@@ -4,6 +4,8 @@
     "artist",
     "artists",
     "likes",
+    "published",
+    "publishedDate",
     "genres",
     "translate",
     "name"

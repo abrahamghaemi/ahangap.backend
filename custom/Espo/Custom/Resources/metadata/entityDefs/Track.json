@@ -206,6 +206,14 @@
             "maxLength": null,
             "options": [],
             "isCustom": true
+        },
+        "publishedDate": {
+            "notNull": false,
+            "type": "date",
+            "default": null,
+            "after": null,
+            "before": null,
+            "isCustom": true
         }
     },
     "links": {

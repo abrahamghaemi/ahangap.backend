@@ -25,7 +25,8 @@
         "album": "Album",
         "users": "Users",
         "albumName": "Album name",
-        "albumId": "Album id"
+        "albumId": "Album id",
+        "publishedDate": "Published Date"
     },
     "links": {
         "categories": "Categories",
