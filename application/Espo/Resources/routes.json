@@ -80,8 +80,7 @@
         "method": "post",
         "params": {
             "controller": "User",
-            "action": "createUser",
-            "apiKey": ":apiKey"
+            "action": "createUser"
         }
     },
     {
