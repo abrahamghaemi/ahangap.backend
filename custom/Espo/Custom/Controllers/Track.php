@@ -56,6 +56,26 @@ class Track extends \Espo\Core\Templates\Controllers\Base
 
     public function actionNew($params, $data, $request)
     {
+        $where = [[
+            "type" => "lastSevenDays",
+            "attribute" => "publishedDate"
+        ]];
+        $params['where'] = $where;
+
+        return $this->getListOfTrack($params, $data, $request);
+    }
+
+    public function actionPopular($params, $data, $request)
+    {
+        $params['orderBy'] = "likes";
+        $params['order'] = "desc";
+
+        return $this->getListOfTrack($params, $data, $request);
+    }
+
+
+    public function getListOfTrack($params, $data, $request)
+    {
         if (!$this->getAcl()->check($this->name, 'read')) {
             throw new Forbidden();
         }
@@ -70,13 +90,6 @@ class Track extends \Espo\Core\Templates\Controllers\Base
         if (!empty($params['maxSize']) && $params['maxSize'] > $maxSizeLimit) {
             throw new Forbidden("Max size should should not exceed " . $maxSizeLimit . ". Use offset and limit.");
         }
-
-
-        $where = [[
-            "type" => "lastSevenDays",
-            "attribute" => "publishedDate"
-        ]];
-        $params['where'] = $where;
 
         $result = $this->getRecordService()->find($params);
 
