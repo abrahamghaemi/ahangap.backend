@@ -127,8 +127,9 @@ class User extends \Espo\Core\Controllers\Record
         return parent::actionRemoveLink($params, $data, $request);
     }
 
-    public function actionCreate($params, $data, $request)
+    public function actionCreateUser($params, $data, $request)
     {
+
         if (!is_object($data)) throw new BadRequest();
 
         if (!$request->isPost()) {
