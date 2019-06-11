@@ -34,5 +34,13 @@
             "action": "like",
             "id": ":id"
         }
+    },
+    {
+        "route": "track/new",
+        "method": "get",
+        "params": {
+            "controller": "Track",
+            "action": "new"
+        }
     }
 ]
