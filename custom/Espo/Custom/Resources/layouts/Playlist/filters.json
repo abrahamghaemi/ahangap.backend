@@ -1,6 +1,8 @@
 [
     "tags",
     "private",
+    "assignedUser",
     "name",
+    "modifiedAt",
     "genre"
 ]

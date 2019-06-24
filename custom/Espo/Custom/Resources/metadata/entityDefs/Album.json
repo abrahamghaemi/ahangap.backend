@@ -65,6 +65,9 @@
             "maxLength": null,
             "options": [],
             "isCustom": true
+        },
+        "user": {
+            "type": "link"
         }
     },
     "links": {
@@ -97,6 +100,13 @@
             "type": "hasMany",
             "foreign": "album",
             "entity": "Track",
+            "audited": false,
+            "isCustom": true
+        },
+        "user": {
+            "type": "belongsTo",
+            "foreign": "albums",
+            "entity": "User",
             "audited": false,
             "isCustom": true
         }

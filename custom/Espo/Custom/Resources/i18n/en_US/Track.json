@@ -26,7 +26,9 @@
         "users": "Users",
         "albumName": "Album name",
         "albumId": "Album id",
-        "publishedDate": "Published Date"
+        "publishedDate": "Published Date",
+        "tracks": "Tracks",
+        "trackParent": "TrackParent"
     },
     "links": {
         "categories": "Categories",
@@ -35,7 +37,9 @@
         "genre": "Genres",
         "playlists": "Playlists",
         "album": "Album",
-        "users": "Users"
+        "users": "Users",
+        "tracks": "Tracks",
+        "trackParent": "TrackParent"
     },
     "labels": {
         "Create Track": "Create Track"

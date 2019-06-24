@@ -15,6 +15,25 @@
             "importDisabled": false,
             "noLoad": false,
             "isCustom": true
+        },
+        "albums": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "noLoad": false,
+            "importDisabled": false,
+            "isCustom": true
+        },
+        "premiumUser": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "avatarLink": {
+            "type": "url",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
         }
     },
     "links": {
@@ -31,6 +50,13 @@
             "relationName": "likeEpisode",
             "foreign": "users",
             "entity": "Episode",
+            "audited": false,
+            "isCustom": true
+        },
+        "albums": {
+            "type": "hasMany",
+            "foreign": "user",
+            "entity": "Album",
             "audited": false,
             "isCustom": true
         }

@@ -6,7 +6,9 @@
         "translate": "Translate",
         "albums": "Albums",
         "tracks": "Tracks",
-        "cover": "Cover"
+        "cover": "Cover",
+        "genre": "Genre",
+        "country": "Country"
     },
     "links": {
         "albums": "Albums",
@@ -14,5 +16,11 @@
     },
     "labels": {
         "Create Artist": "Create Artist"
+    },
+    "options": {
+        "country": {
+            "Iran": "ایران",
+            "USA": "آمریکا"
+        }
     }
 }

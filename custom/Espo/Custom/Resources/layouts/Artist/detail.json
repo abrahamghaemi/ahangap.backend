@@ -21,7 +21,9 @@
                 {
                     "name": "cover"
                 },
-                false
+                {
+                    "name": "genre"
+                }
             ],
             [
                 {

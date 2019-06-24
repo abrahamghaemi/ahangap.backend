@@ -1,10 +1,14 @@
 {
     "fields": {
         "tracks": "Tracks",
-        "episodes": "Episodes"
+        "episodes": "Episodes",
+        "albums": "Albums",
+        "premiumUser": "Premium user",
+        "avatarLink": "Avatar link"
     },
     "links": {
         "tracks": "Tracks",
-        "episodes": "Episodes"
+        "episodes": "Episodes",
+        "albums": "Albums"
     }
 }
