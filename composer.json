@@ -37,7 +37,8 @@
         "container-interop/container-interop": "1.2.0",
         "zendframework/zend-mime": "^2.7.1",
         "zendframework/zend-stdlib": "^3.1",
-        "duncan3dc/sessions": "^2.0"
+        "duncan3dc/sessions": "^2.0",
+        "kavenegar/php": "^1.2"
     },
     "autoload": {
         "psr-0": {
