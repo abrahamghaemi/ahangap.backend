@@ -8,4 +8,9 @@ class Album extends \Espo\Core\Templates\Controllers\Base
     {
         return 'ok';
     }
+
+    public function actionNewest($params, $data, $request)
+    {
+        return 'ok';
+    }
 }
