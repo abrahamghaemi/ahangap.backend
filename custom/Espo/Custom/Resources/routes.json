@@ -66,5 +66,13 @@
             "controller": "Album",
             "action": "newest"
         }
+    },
+    {
+        "route": "otpManager/send",
+        "method": "post",
+        "params": {
+            "controller": "OtpManager",
+            "action": "send"
+        }
     }
 ]
