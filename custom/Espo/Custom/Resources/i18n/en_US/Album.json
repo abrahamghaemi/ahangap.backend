@@ -4,11 +4,13 @@
         "artist": "Artist",
         "tracks": "Tracks",
         "cover": "Cover",
-        "artistName": "Artist name"
+        "artistName": "Artist name",
+        "user": "User"
     },
     "links": {
         "artist": "Artist",
-        "tracks": "Tracks"
+        "tracks": "Tracks",
+        "user": "User"
     },
     "labels": {
         "Create Album": "Create Album"

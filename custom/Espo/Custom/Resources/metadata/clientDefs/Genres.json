@@ -3,5 +3,6 @@
     "boolFilterList": [
         "onlyMy"
     ],
-    "iconClass": "fas fa-vector-square"
+    "iconClass": "fas fa-vector-square",
+    "kanbanViewMode": false
 }

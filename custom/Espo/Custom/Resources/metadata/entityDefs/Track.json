@@ -214,6 +214,17 @@
             "after": null,
             "before": null,
             "isCustom": true
+        },
+        "tracks": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "noLoad": false,
+            "importDisabled": false,
+            "isCustom": true
+        },
+        "trackParent": {
+            "type": "link"
         }
     },
     "links": {
@@ -284,6 +295,20 @@
             "relationName": "likeTrack",
             "foreign": "tracks",
             "entity": "User",
+            "audited": false,
+            "isCustom": true
+        },
+        "tracks": {
+            "type": "hasMany",
+            "foreign": "trackParent",
+            "entity": "Track",
+            "audited": false,
+            "isCustom": true
+        },
+        "trackParent": {
+            "type": "belongsTo",
+            "foreign": "tracks",
+            "entity": "Track",
             "audited": false,
             "isCustom": true
         }

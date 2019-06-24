@@ -83,6 +83,27 @@
             "default": null,
             "maxLength": null,
             "isCustom": true
+        },
+        "genre": {
+            "type": "varchar",
+            "options": [],
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "country": {
+            "type": "enum",
+            "options": [
+                "Iran",
+                "USA"
+            ],
+            "style": {
+                "Iran": null,
+                "USA": null
+            },
+            "isSorted": true,
+            "default": "Iran",
+            "isCustom": true
         }
     },
     "links": {

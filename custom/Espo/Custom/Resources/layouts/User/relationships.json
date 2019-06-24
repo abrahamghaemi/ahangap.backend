@@ -1,10 +1,13 @@
 [
     {
-        "name": "episodes",
+        "name": "tracks",
         "style": "primary"
     },
     {
-        "name": "tracks",
+        "name": "albums"
+    },
+    {
+        "name": "episodes",
         "style": "primary"
     }
 ]

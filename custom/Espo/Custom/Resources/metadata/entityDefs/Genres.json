@@ -110,7 +110,12 @@
     },
     "collection": {
         "orderBy": "createdAt",
-        "order": "desc"
+        "order": "desc",
+        "textFilterFields": [
+            "name",
+            "translate"
+        ],
+        "fullTextSearch": false
     },
     "indexes": {
         "name": {

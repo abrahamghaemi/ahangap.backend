@@ -19,6 +19,9 @@
         "name": "likes"
     },
     {
+        "name": "genre"
+    },
+    {
         "name": "artist"
     },
     {
