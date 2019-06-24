@@ -2,6 +2,10 @@
 
 namespace Espo\Custom\Controllers;
 
+use Espo\Core\Exceptions\BadRequest;
+use Espo\Core\Exceptions\Error;
+use Espo\Core\Exceptions\Forbidden;
+
 class OtpManager extends \Espo\Core\Templates\Controllers\Base
 {
     public function actionSend($params, $data, $request)
