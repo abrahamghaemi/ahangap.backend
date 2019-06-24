@@ -50,5 +50,13 @@
             "controller": "Track",
             "action": "popular"
         }
+    },
+    {
+    "route": "album/popular",
+    "method": "get",
+    "params": {
+      "controller": "Album",
+      "action": "popular"
+      }
     }
 ]
