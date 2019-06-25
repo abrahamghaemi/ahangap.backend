@@ -27,7 +27,7 @@ class OtpManager extends \Espo\Core\Templates\Controllers\Base
         $data['name'] = $code;
 
         if ($entity = $service->create($data)) {
-            $this->sendOtp($data);
+//            $this->sendOtp($data);
             return $entity->getValueMap();
         }
 
