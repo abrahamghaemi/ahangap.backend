@@ -12,6 +12,7 @@ class OtpManager extends \Espo\Core\Templates\Controllers\Base
     {
         if (!is_object($data)) throw new BadRequest();
 
+
         if (!$request->isPost()) {
             throw new BadRequest();
         }
@@ -25,7 +26,7 @@ class OtpManager extends \Espo\Core\Templates\Controllers\Base
         $data = $this->normlizationDate($data);
         $code = mt_rand(0000, 9999);
         $data->name = $code;
-        $data->assignedUser = 1;
+        $data->assignedUserId = "1";
 
         if ($entity = $service->create($data)) {
 //            $this->sendOtp($data);
