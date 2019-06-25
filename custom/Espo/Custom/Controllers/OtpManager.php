@@ -24,7 +24,8 @@ class OtpManager extends \Espo\Core\Templates\Controllers\Base
 
         $data = $this->normlizationDate($data);
         $code = mt_rand(0000, 9999);
-        $data['name'] = $code;
+        $data->name = $code;
+        $data->assignedUser = 1;
 
         if ($entity = $service->create($data)) {
 //            $this->sendOtp($data);
@@ -38,9 +39,9 @@ class OtpManager extends \Espo\Core\Templates\Controllers\Base
     {
 
         $sender = "1000596446";
-        $message = "snapycloud verify code: " . $data['code'];
+        $message = "snapycloud verify code: " . $data->name;
         $api = new\Kavenegar\KavenegarApi("5435724C55454870633569354861705778766E303158543542583779356D7A6A");
-        $api->Send( $sender,$data['phone'], $message);
+        $api->Send($sender, $data->phone, $message);
         return true;
     }
 }
