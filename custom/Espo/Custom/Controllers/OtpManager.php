@@ -38,12 +38,22 @@ class OtpManager extends \Espo\Core\Templates\Controllers\Base
 
     public function actionVerify($params, $data, $request)
     {
-        $name = $params['message'];
-        $entity = $this->getRecordService()->read($name);
-        return $entity->getValueMap();
+        $name = $data->message;
+		$phone = $data->phone;
+
+		$entityManager = $this->getEntityManager();
+        $entity = $entityManager->getRepository('OtpManager')->where([
+            'phone' => $phone,
+			'isClose' => false
+        ])->findOne();
 
 
-        if ($entity = $this->getRecordService()->update($id, $d)) {
+		if(!is_object($entity) || $entity->get('name') != $name) {
+			throw new Error();
+		}
+
+
+        if ( $entity->has('id') && $entity = $this->getRecordService()->update($entity->get('id'),['status' => true, 'isClose' => true])) {
             return $entity->getValueMap();
         }
 
