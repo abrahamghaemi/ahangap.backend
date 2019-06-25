@@ -47,6 +47,11 @@
             "notNull": true,
             "type": "bool",
             "isCustom": true
+        },
+        "isClose": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
         }
     },
     "links": {

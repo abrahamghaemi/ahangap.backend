@@ -1,7 +1,8 @@
 {
     "fields": {
         "phone": "Phone",
-        "status": "Status"
+        "status": "Status",
+        "isClose": "Is close"
     },
     "links": [],
     "labels": {
