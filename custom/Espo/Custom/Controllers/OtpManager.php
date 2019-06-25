@@ -35,6 +35,20 @@ class OtpManager extends \Espo\Core\Templates\Controllers\Base
         throw new Error();
     }
 
+    public function actionVerify($params, $data, $request)
+    {
+        $name = $params['message'];
+        $entity = $this->getRecordService()->read($name);
+        return $entity->getValueMap();
+
+
+        if ($entity = $this->getRecordService()->update($id, $d)) {
+            return $entity->getValueMap();
+        }
+
+        throw new Error();
+    }
+
     public function sendOtp($data)
     {
 

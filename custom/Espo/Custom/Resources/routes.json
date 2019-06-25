@@ -74,5 +74,13 @@
             "controller": "OtpManager",
             "action": "send"
         }
+    },
+    {
+        "route": "otpManager/verify",
+        "method": "PUT",
+        "params": {
+            "controller": "OtpManager",
+            "action": "verify"
+        }
     }
 ]
