@@ -19,6 +19,12 @@
             ],
             [
                 {
+                    "name": "published"
+                },
+                false
+            ],
+            [
+                {
                     "name": "cover"
                 },
                 false

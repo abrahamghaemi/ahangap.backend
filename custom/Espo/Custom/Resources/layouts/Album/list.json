@@ -7,6 +7,9 @@
         "name": "artistName"
     },
     {
+        "name": "published"
+    },
+    {
         "name": "artist"
     },
     {

@@ -68,6 +68,14 @@
         },
         "user": {
             "type": "link"
+        },
+        "published": {
+            "notNull": false,
+            "type": "date",
+            "default": null,
+            "after": null,
+            "before": null,
+            "isCustom": true
         }
     },
     "links": {

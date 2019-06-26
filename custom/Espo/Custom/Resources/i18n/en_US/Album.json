@@ -5,7 +5,8 @@
         "tracks": "Tracks",
         "cover": "Cover",
         "artistName": "Artist name",
-        "user": "User"
+        "user": "User",
+        "published": "Published"
     },
     "links": {
         "artist": "Artist",
