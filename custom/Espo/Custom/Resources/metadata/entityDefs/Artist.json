@@ -104,6 +104,13 @@
             "isSorted": true,
             "default": "Iran",
             "isCustom": true
+        },
+        "like": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
         }
     },
     "links": {

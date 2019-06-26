@@ -76,6 +76,20 @@
             "after": null,
             "before": null,
             "isCustom": true
+        },
+        "like": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "plays": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
         }
     },
     "links": {

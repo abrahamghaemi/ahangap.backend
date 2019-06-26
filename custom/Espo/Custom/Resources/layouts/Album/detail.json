@@ -19,6 +19,14 @@
             ],
             [
                 {
+                    "name": "like"
+                },
+                {
+                    "name": "plays"
+                }
+            ],
+            [
+                {
                     "name": "published"
                 },
                 false

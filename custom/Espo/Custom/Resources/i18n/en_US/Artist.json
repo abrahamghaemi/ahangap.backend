@@ -8,7 +8,8 @@
         "tracks": "Tracks",
         "cover": "Cover",
         "genre": "Genre",
-        "country": "Country"
+        "country": "Country",
+        "like": "Like"
     },
     "links": {
         "albums": "Albums",

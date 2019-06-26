@@ -6,7 +6,9 @@
         "cover": "Cover",
         "artistName": "Artist name",
         "user": "User",
-        "published": "Published"
+        "published": "Published",
+        "like": "Like",
+        "plays": "Plays"
     },
     "links": {
         "artist": "Artist",

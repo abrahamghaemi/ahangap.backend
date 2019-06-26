@@ -7,6 +7,12 @@
         "name": "artistName"
     },
     {
+        "name": "like"
+    },
+    {
+        "name": "plays"
+    },
+    {
         "name": "published"
     },
     {
