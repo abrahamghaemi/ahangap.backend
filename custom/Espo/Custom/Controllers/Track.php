@@ -54,7 +54,7 @@ class Track extends \Espo\Core\Templates\Controllers\Base
         throw new Error();
     }
 
-    public function actionNew($params, $data, $request)
+    public function actionNewest($params, $data, $request)
     {
         $params = [];
         $this->fetchListParamsFromRequest($params, $request, $data);

@@ -40,7 +40,7 @@
         "method": "get",
         "params": {
             "controller": "Track",
-            "action": "new"
+            "action": "newest"
         }
     },
     {
