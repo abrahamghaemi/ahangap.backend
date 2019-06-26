@@ -6,7 +6,10 @@ class Album extends \Espo\Core\Templates\Controllers\Base
 {
     public function actionPopular($params, $data, $request)
     {
-        return 'ok';
+        $params = [];
+        $this->fetchListParamsFromRequest($params, $request, $data);
+
+        return $this->getListOfTrack($params);
     }
 
     public function actionNewest($params, $data, $request)
