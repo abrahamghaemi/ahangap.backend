@@ -29,7 +29,7 @@ class OtpManager extends \Espo\Core\Templates\Controllers\Base
         $data->assignedUserId = "1";
 
         if ($entity = $service->create($data)) {
-//            $this->sendOtp($data);
+            $this->sendOtp($data);
             return $entity->getValueMap();
         }
 
@@ -45,7 +45,7 @@ class OtpManager extends \Espo\Core\Templates\Controllers\Base
         $entity = $entityManager->getRepository('OtpManager')->where([
             'phone' => $phone,
 			'isClose' => false
-        ])->findOne();
+        ])->order('createdAt')->findOne();
 
 
 		if(!is_object($entity) || $entity->get('name') != $name) {
@@ -63,7 +63,7 @@ class OtpManager extends \Espo\Core\Templates\Controllers\Base
     public function sendOtp($data)
     {
 
-        $sender = "1000596446";
+        $sender = "2000004346";
         $message = "snapycloud verify code: " . $data->name;
         $api = new\Kavenegar\KavenegarApi("5435724C55454870633569354861705778766E303158543542583779356D7A6A");
         $api->Send($sender, $data->phone, $message);
