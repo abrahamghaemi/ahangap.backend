@@ -4,11 +4,13 @@
         "episodes": "Episodes",
         "albums": "Albums",
         "premiumUser": "Premium user",
-        "avatarLink": "Avatar link"
+        "avatarLink": "Avatar link",
+        "genres": "Genres"
     },
     "links": {
         "tracks": "Tracks",
         "episodes": "Episodes",
-        "albums": "Albums"
+        "albums": "Albums",
+        "genres": "Genres"
     }
 }

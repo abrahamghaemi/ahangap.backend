@@ -5,10 +5,12 @@
         "token": "Token",
         "img": "Img",
         "translate": "Translate",
-        "tracks": "Tracks"
+        "tracks": "Tracks",
+        "user": "User"
     },
     "links": {
-        "tracks": "Tracks"
+        "tracks": "Tracks",
+        "user": "User"
     },
     "labels": {
         "Create Genres": "Create Genres"

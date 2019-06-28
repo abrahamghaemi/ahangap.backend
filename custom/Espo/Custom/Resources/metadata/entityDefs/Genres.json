@@ -74,6 +74,9 @@
             "noLoad": false,
             "importDisabled": false,
             "isCustom": true
+        },
+        "user": {
+            "type": "link"
         }
     },
     "links": {
@@ -104,6 +107,13 @@
             "type": "hasMany",
             "foreign": "genre",
             "entity": "Track",
+            "audited": false,
+            "isCustom": true
+        },
+        "user": {
+            "type": "belongsTo",
+            "foreign": "genres",
+            "entity": "User",
             "audited": false,
             "isCustom": true
         }
