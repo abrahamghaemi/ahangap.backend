@@ -54,7 +54,13 @@ class OtpManager extends \Espo\Core\Templates\Controllers\Base
 
 
         if ( $entity->has('id') && $entity = $this->getRecordService()->update($entity->get('id'),['status' => true, 'isClose' => true])) {
-            return $entity->getValueMap();
+
+            $entity = $entityManager->getRepository('User')->where([
+                'phone' => $phone,
+                'isActive' => true
+            ])->findOne();
+
+            return $entity->getValueMap() ?? true;
         }
 
         throw new Error();
