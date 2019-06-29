@@ -90,5 +90,13 @@
             "controller": "Artist",
             "action": "popular"
         }
+    },
+    {
+        "route": "artist/newest",
+        "method": "GET",
+        "params": {
+            "controller": "Artist",
+            "action": "newest"
+        }
     }
 ]

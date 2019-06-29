@@ -16,6 +16,20 @@ class Artist extends Controller
         return $this->getListOfTrack($params);
     }
 
+    public function actionNewest($params, $data, $request)
+    {
+        $params = [];
+        $this->fetchListParamsFromRequest($params, $request, $data);
+        $where = [[
+            "type" => "lastXDays",
+            "attribute" => "createdAt",
+            "value" => 30
+        ]];
+        $params['where'] = $where;
+
+        return $this->getListOfTrack($params);
+    }
+
     public function getListOfTrack($params)
     {
         if (!$this->getAcl()->check($this->name, 'read')) {
