@@ -54,10 +54,10 @@
     {
     "route": "album/popular",
     "method": "get",
-    "params": {
-      "controller": "Album",
-      "action": "popular"
-      }
+        "params": {
+          "controller": "Album",
+          "action": "popular"
+        }
     },
     {
         "route": "album/newest",
@@ -81,6 +81,14 @@
         "params": {
             "controller": "OtpManager",
             "action": "verify"
+        }
+    },
+    {
+        "route": "artist/popular",
+        "method": "GET",
+        "params": {
+            "controller": "Artist",
+            "action": "popular"
         }
     }
 ]
