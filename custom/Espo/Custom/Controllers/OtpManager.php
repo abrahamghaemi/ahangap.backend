@@ -30,7 +30,7 @@ class OtpManager extends \Espo\Core\Templates\Controllers\Base
 
         if ($entity = $service->create($data)) {
             $this->sendOtp($data);
-            return $entity->getValueMap();
+            return true;
         }
 
         throw new Error();
@@ -56,11 +56,16 @@ class OtpManager extends \Espo\Core\Templates\Controllers\Base
         if ( $entity->has('id') && $entity = $this->getRecordService()->update($entity->get('id'),['status' => true, 'isClose' => true])) {
 
             $entity = $entityManager->getRepository('User')->where([
-                'phone' => $phone,
-                'isActive' => true
+                'phoneNumber' => $phone
             ])->findOne();
 
-            return $entity->getValueMap() ?? true;
+            if($entity) {
+                $response = $entity->getValueMap();
+                unset($response->password);
+                return $response;
+            }
+
+            return true;
         }
 
         throw new Error();
