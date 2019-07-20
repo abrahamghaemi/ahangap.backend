@@ -5,12 +5,17 @@
         "albums": "Albums",
         "premiumUser": "Premium user",
         "avatarLink": "Avatar link",
-        "genres": "Genres"
+        "genres": "Genres",
+        "artists": "Artists",
+        "playlists": "Playlists",
+        "cover": "Cover"
     },
     "links": {
         "tracks": "Tracks",
         "episodes": "Episodes",
         "albums": "Albums",
-        "genres": "Genres"
+        "genres": "Genres",
+        "artists": "Artists",
+        "playlists": "Playlists"
     }
 }

@@ -1,0 +1,13 @@
+{
+    "fields": {
+        "img": "Img",
+        "translate": "Translate",
+        "tracks": "Tracks"
+    },
+    "links": {
+        "tracks": "Tracks"
+    },
+    "labels": {
+        "Create Celebrities": "Create Celebrity"
+    }
+}

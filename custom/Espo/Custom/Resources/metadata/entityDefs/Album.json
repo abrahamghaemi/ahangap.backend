@@ -90,6 +90,13 @@
             "min": null,
             "max": null,
             "isCustom": true
+        },
+        "publishedDate": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
         }
     },
     "links": {

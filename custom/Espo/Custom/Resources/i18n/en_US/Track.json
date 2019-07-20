@@ -28,7 +28,8 @@
         "albumId": "Album id",
         "publishedDate": "Published Date",
         "tracks": "Tracks",
-        "trackParent": "TrackParent"
+        "trackParent": "TrackParent",
+        "celebrities": "Celebrities"
     },
     "links": {
         "categories": "Categories",
@@ -39,7 +40,8 @@
         "album": "Album",
         "users": "Users",
         "tracks": "Tracks",
-        "trackParent": "TrackParent"
+        "trackParent": "TrackParent",
+        "celebrities": "Celebrities"
     },
     "labels": {
         "Create Track": "Create Track"

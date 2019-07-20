@@ -225,6 +225,9 @@
         },
         "trackParent": {
             "type": "link"
+        },
+        "celebrities": {
+            "type": "link"
         }
     },
     "links": {
@@ -310,6 +313,13 @@
             "foreign": "tracks",
             "entity": "Track",
             "audited": false,
+            "isCustom": true
+        },
+        "celebrities": {
+            "type": "belongsTo",
+            "foreign": "tracks",
+            "entity": "Celebrities",
+            "audited": true,
             "isCustom": true
         }
     },

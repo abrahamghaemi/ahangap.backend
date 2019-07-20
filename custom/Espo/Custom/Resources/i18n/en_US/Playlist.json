@@ -7,12 +7,14 @@
         "tags": "Tags",
         "member": "Member",
         "tracks": "Tracks",
-        "members": "Members"
+        "members": "Members",
+        "user": "User"
     },
     "links": {
         "member": "Member",
         "tracks": "Tracks",
-        "members": "Members"
+        "members": "Members",
+        "user": "User"
     },
     "labels": {
         "Create Playlist": "Create Playlist"

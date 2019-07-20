@@ -42,6 +42,27 @@
             "noLoad": false,
             "importDisabled": false,
             "isCustom": true
+        },
+        "artists": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "noLoad": false,
+            "importDisabled": false,
+            "isCustom": true
+        },
+        "playlists": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "noLoad": false,
+            "importDisabled": false,
+            "isCustom": true
+        },
+        "cover": {
+            "type": "image",
+            "maxFileSize": 0.5,
+            "isCustom": true
         }
     },
     "links": {
@@ -74,6 +95,25 @@
             "entity": "Genres",
             "audited": false,
             "isCustom": true
+        },
+        "artists": {
+            "type": "hasMany",
+            "foreign": "user",
+            "entity": "Artist",
+            "audited": false,
+            "isCustom": true
+        },
+        "playlists": {
+            "type": "hasMany",
+            "foreign": "user",
+            "entity": "Playlist",
+            "audited": false,
+            "isCustom": true
+        },
+        "cover": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true
         }
     }
 }

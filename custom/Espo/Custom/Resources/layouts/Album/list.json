@@ -13,6 +13,9 @@
         "name": "plays"
     },
     {
+        "name": "publishedDate"
+    },
+    {
         "name": "published"
     },
     {

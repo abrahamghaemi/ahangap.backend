@@ -3,39 +3,37 @@
         "rows": [
             [
                 {
-                    "name": "name"
+                    "name": "userName"
                 },
-                {
-                    "name": "translate"
-                }
-            ],
-            [
-                {
-                    "name": "artistName"
-                },
-                {
-                    "name": "artist"
-                }
-            ],
-            [
-                {
-                    "name": "like"
-                },
-                {
-                    "name": "plays"
-                }
-            ],
-            [
-                {
-                    "name": "published"
-                },
-                {
-                    "name": "publishedDate"
-                }
+                false
             ],
             [
                 {
                     "name": "cover"
+                },
+                {
+                    "name": "avatarLink"
+                }
+            ],
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "title"
+                }
+            ],
+            [
+                {
+                    "name": "emailAddress"
+                },
+                {
+                    "name": "phoneNumber"
+                }
+            ],
+            [
+                {
+                    "name": "gender"
                 },
                 false
             ]

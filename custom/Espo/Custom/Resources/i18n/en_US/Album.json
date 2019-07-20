@@ -8,7 +8,8 @@
         "user": "User",
         "published": "Published",
         "like": "Like",
-        "plays": "Plays"
+        "plays": "Plays",
+        "publishedDate": "Published Date"
     },
     "links": {
         "artist": "Artist",

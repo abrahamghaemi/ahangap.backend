@@ -9,11 +9,13 @@
         "cover": "Cover",
         "genre": "Genre",
         "country": "Country",
-        "like": "Like"
+        "like": "Like",
+        "user": "User"
     },
     "links": {
         "albums": "Albums",
-        "tracks": "Tracks"
+        "tracks": "Tracks",
+        "user": "User"
     },
     "labels": {
         "Create Artist": "Create Artist"

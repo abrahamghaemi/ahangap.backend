@@ -4,31 +4,31 @@
         "link": true
     },
     {
-        "name": "albumId"
-    },
-    {
-        "name": "album"
-    },
-    {
-        "name": "genres"
+        "name": "artist"
     },
     {
         "name": "artists"
-    },
-    {
-        "name": "likes"
-    },
-    {
-        "name": "genre"
-    },
-    {
-        "name": "artist"
     },
     {
         "name": "translate"
     },
     {
         "name": "duration"
+    },
+    {
+        "name": "genres"
+    },
+    {
+        "name": "genre"
+    },
+    {
+        "name": "likes"
+    },
+    {
+        "name": "albumId"
+    },
+    {
+        "name": "album"
     },
     {
         "name": "publishedDate"

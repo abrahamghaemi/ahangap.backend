@@ -12,7 +12,8 @@
         "Episode": "Episode",
         "Greptor": "Greptor",
         "EpisodeCategory": "EpisodeCategory",
-        "OtpManager": "OtpManager"
+        "OtpManager": "OtpManager",
+        "Celebrities": "Celebrity"
     },
     "scopeNamesPlural": {
         "Categories": "Categories",
@@ -27,6 +28,7 @@
         "Episode": "Episodes",
         "Greptor": "Greptors",
         "EpisodeCategory": "EpisodeCategories",
-        "OtpManager": "OtpManagers"
+        "OtpManager": "OtpManagers",
+        "Celebrities": "Celebrities"
     }
 }

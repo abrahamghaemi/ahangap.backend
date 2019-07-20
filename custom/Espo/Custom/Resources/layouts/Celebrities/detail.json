@@ -5,23 +5,19 @@
                 {
                     "name": "name"
                 },
-                false
-            ],
-            [
                 {
-                    "name": "cover",
-                    "fullWidth": true
+                    "name": "translate"
                 }
-            ],
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
             [
                 {
-                    "name": "routeUrl",
-                    "fullWidth": true
-                }
-            ],
-            [
-                {
-                    "name": "routes",
+                    "name": "img",
                     "fullWidth": true
                 }
             ],
@@ -33,6 +29,7 @@
             ]
         ],
         "style": "default",
-        "label": "Overview"
+        "dynamicLogicVisible": null,
+        "customLabel": "Bio"
     }
 ]

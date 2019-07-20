@@ -1,10 +1,16 @@
 [
     {
-        "name": "tracks",
-        "style": "primary"
+        "name": "artists"
     },
     {
         "name": "albums"
+    },
+    {
+        "name": "playlists"
+    },
+    {
+        "name": "tracks",
+        "style": "primary"
     },
     {
         "name": "genres"

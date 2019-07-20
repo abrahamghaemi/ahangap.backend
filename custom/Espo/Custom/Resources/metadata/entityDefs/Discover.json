@@ -48,6 +48,29 @@
             "noLoad": false,
             "importDisabled": false,
             "isCustom": true
+        },
+        "routeUrl": {
+            "type": "url",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "routes": {
+            "type": "enum",
+            "options": [
+                "https://5cfaef0c2e59fde353.app.beatsmusic.ir/api/v1/album/newest",
+                "https://5cfaef0c2e59fde353.app.beatsmusic.ir/api/v1/album/popular",
+                "https://5cfaef0c2e59fde353.app.beatsmusic.ir/api/v1/track/newest",
+                "https://5cfaef0c2e59fde353.app.beatsmusic.ir/api/v1/track/popular"
+            ],
+            "style": {
+                "https://5cfaef0c2e59fde353.app.beatsmusic.ir/api/v1/album/newest": null,
+                "https://5cfaef0c2e59fde353.app.beatsmusic.ir/api/v1/album/popular": null,
+                "https://5cfaef0c2e59fde353.app.beatsmusic.ir/api/v1/track/newest": null,
+                "https://5cfaef0c2e59fde353.app.beatsmusic.ir/api/v1/track/popular": null
+            },
+            "default": "https://5cfaef0c2e59fde353.app.beatsmusic.ir/api/v1/album/newest",
+            "isCustom": true
         }
     },
     "links": {
