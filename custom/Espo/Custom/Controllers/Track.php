@@ -38,6 +38,35 @@ class Track extends \Espo\Core\Templates\Controllers\Base
 		die;
     }
 
+
+	public function actionRead($params, $data, $request)
+    {
+        $id = $params['id'];
+        $entity = $this->getRecordService()->readEntity($id);
+
+        if (empty($entity)) {
+            throw new NotFound();
+        }
+
+        if($_SERVER['HTTP_CLIENTID']){
+            $item = (array) $entity->getValueMap();
+            $item['liked'] = $this->hasLiked($item['id'], $_SERVER['HTTP_CLIENTID']);
+            return (object) $item;
+        }
+
+        return $entity->getValueMap();
+    }
+
+    public function hasLiked($track_id, $client_id)
+    {
+        $pdo = $this->getEntityManager()->getPDO();
+        $sql = "select * from like_track where deleted = 0 and user_id = " . $pdo->quote($client_id) . " and track_id = " . $pdo->quote($track_id);
+        $sth = $pdo->prepare($sql);
+        $sth->execute();
+
+        return $sth->fetchColumn() ? true : false;
+    }
+
     public function actionLike($params, $data, $request)
     {
         $id = $params['id'];
