@@ -19,8 +19,7 @@ class Track extends \Espo\Core\Templates\Controllers\Base
             $entity->get('stream'), PHP_URL_PATH
         );
 
-        $file = '/home/apps/music/repository' . $file;
-
+        $file = '/usr/share/nginx/music/repository' . $file;
 
 		header('Transfer-Encoding: chunked');
 		header('Pragma: public');
