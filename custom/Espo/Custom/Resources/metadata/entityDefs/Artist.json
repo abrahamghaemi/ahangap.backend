@@ -112,8 +112,13 @@
             "max": null,
             "isCustom": true
         },
-        "user": {
-            "type": "link"
+        "users": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
         }
     },
     "links": {
@@ -155,8 +160,9 @@
             "audited": false,
             "isCustom": true
         },
-        "user": {
-            "type": "belongsTo",
+        "users": {
+            "type": "hasMany",
+            "relationName": "userArtist",
             "foreign": "artists",
             "entity": "User",
             "audited": false,

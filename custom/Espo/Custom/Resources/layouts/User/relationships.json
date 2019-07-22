@@ -1,12 +1,12 @@
 [
     {
+        "name": "playlists"
+    },
+    {
         "name": "artists"
     },
     {
         "name": "albums"
-    },
-    {
-        "name": "playlists"
     },
     {
         "name": "tracks",

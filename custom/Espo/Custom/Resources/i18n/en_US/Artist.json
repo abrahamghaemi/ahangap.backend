@@ -10,12 +10,14 @@
         "genre": "Genre",
         "country": "Country",
         "like": "Like",
-        "user": "User"
+        "user": "User",
+        "users": "Users"
     },
     "links": {
         "albums": "Albums",
         "tracks": "Tracks",
-        "user": "User"
+        "user": "User",
+        "users": "Users"
     },
     "labels": {
         "Create Artist": "Create Artist"
