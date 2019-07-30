@@ -75,9 +75,9 @@ class OtpManager extends \Espo\Core\Templates\Controllers\Base
     {
 
         $sender = "2000004346";
-        $message = "snapycloud verify code: " . $data->name;
+        $token = $data->name;
         $api = new\Kavenegar\KavenegarApi("5435724C55454870633569354861705778766E303158543542583779356D7A6A");
-        $api->Send($sender, $data->phone, $message);
+        $api->VerifyLookup($data->phone, $token, "", "", 'SnappBIT', 'sms');
         return true;
     }
 }
