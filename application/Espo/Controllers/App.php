@@ -30,7 +30,6 @@
 namespace Espo\Controllers;
 
 use \Espo\Core\Exceptions\BadRequest;
-use Espo\EntryPoints\Avatar;
 
 class App extends \Espo\Core\Controllers\Base
 {
@@ -58,10 +57,4 @@ class App extends \Espo\Core\Controllers\Base
         return $auth->destroyAuthToken($data->token);
     }
 
-    public function actionAvatar()
-    {
-        $avatar = new Avatar();
-        $avatar->run();
-        exit;
-    }
 }

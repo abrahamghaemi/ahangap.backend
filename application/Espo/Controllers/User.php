@@ -29,6 +29,7 @@
 
 namespace Espo\Controllers;
 
+use Espo\EntryPoints\Avatar;
 use \Espo\Core\Exceptions\Error;
 use \Espo\Core\Exceptions\NotFound;
 use \Espo\Core\Exceptions\Forbidden;
@@ -149,5 +150,12 @@ class User extends \Espo\Core\Controllers\Record
         }
 
         throw new Error();
+    }
+
+    public function actionAvatar()
+    {
+        $avatar = new Avatar();
+        $avatar->run();
+        exit;
     }
 }

@@ -13,14 +13,6 @@
         }
     },
     {
-        "route": "/App/avatar",
-        "method": "get",
-        "params": {
-            "controller": "App",
-            "action": "avatar"
-        }
-    },
-    {
         "route": "/Metadata",
         "method": "get",
         "params": {
@@ -89,6 +81,14 @@
         "params": {
             "controller": "User",
             "action": "createUser"
+        }
+    },
+    {
+        "route": "/User/avatar",
+        "method": "get",
+        "params": {
+            "controller": "User",
+            "action": "avatar"
         }
     },
     {
