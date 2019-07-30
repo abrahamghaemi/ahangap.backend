@@ -24,7 +24,7 @@ class OtpManager extends \Espo\Core\Templates\Controllers\Base
         $service = $this->getRecordService();
 
         $data = $this->normlizationDate($data);
-        $code = mt_rand(0000, 9999);
+        $code = mt_rand(1000, 9999);
         $data->name = $code;
         $data->assignedUserId = "1";
 
