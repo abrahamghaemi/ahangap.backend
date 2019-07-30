@@ -11,13 +11,15 @@
         "country": "Country",
         "like": "Like",
         "user": "User",
-        "users": "Users"
+        "users": "Users",
+        "greptors": "Greptors"
     },
     "links": {
         "albums": "Albums",
         "tracks": "Tracks",
         "user": "User",
-        "users": "Users"
+        "users": "Users",
+        "greptors": "Greptors"
     },
     "labels": {
         "Create Artist": "Create Artist"

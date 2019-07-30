@@ -34,6 +34,44 @@
         "teams": {
             "type": "linkMultiple",
             "view": "views/fields/teams"
+        },
+        "type": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "track",
+                "artist",
+                "album"
+            ],
+            "style": {
+                "track": null,
+                "artist": null,
+                "album": null
+            },
+            "isSorted": true,
+            "displayAsLabel": true,
+            "default": "track",
+            "isCustom": true
+        },
+        "done": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "link": {
+            "type": "url",
+            "required": true,
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "artists": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
         }
     },
     "links": {
@@ -54,6 +92,14 @@
             "entity": "Team",
             "relationName": "EntityTeam",
             "layoutRelationshipsDisabled": true
+        },
+        "artists": {
+            "type": "hasMany",
+            "relationName": "greptorArtist",
+            "foreign": "greptors",
+            "entity": "Artist",
+            "audited": false,
+            "isCustom": true
         }
     },
     "collection": {

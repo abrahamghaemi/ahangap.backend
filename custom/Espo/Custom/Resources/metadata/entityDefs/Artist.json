@@ -119,6 +119,14 @@
             "importDisabled": false,
             "noLoad": false,
             "isCustom": true
+        },
+        "greptors": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
         }
     },
     "links": {
@@ -165,6 +173,14 @@
             "relationName": "userArtist",
             "foreign": "artists",
             "entity": "User",
+            "audited": false,
+            "isCustom": true
+        },
+        "greptors": {
+            "type": "hasMany",
+            "relationName": "greptorArtist",
+            "foreign": "artists",
+            "entity": "Greptor",
             "audited": false,
             "isCustom": true
         }
