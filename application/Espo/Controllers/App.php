@@ -61,7 +61,7 @@ class App extends \Espo\Core\Controllers\Base
     public function actionAvatar()
     {
         $avatar = new Avatar();
-        $avatar->run()
+        $avatar->run();
         exit;
     }
 }
