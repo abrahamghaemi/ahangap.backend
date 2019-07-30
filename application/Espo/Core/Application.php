@@ -115,6 +115,10 @@ class Application
         try {
             $authRequired = $entryPointManager->checkAuthRequired($entryPoint);
             $authNotStrict = $entryPointManager->checkNotStrictAuth($entryPoint);
+            if($_SERVER['HTTP_CLIENTID']) {
+                $authRequired = false;
+                $authNotStrict = true;
+            }
             if ($authRequired && !$authNotStrict) {
                 if (!$final && $portalId = $this->detectedPortalId()) {
                     $app = new \Espo\Core\Portal\Application($portalId);

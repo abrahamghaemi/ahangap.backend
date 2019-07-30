@@ -154,6 +154,9 @@ class User extends \Espo\Core\Controllers\Record
 
     public function actionAvatar()
     {
+        $app = new \Espo\Core\Application();
+        $app->runEntryPoint('avatar');
+        exit;
         $avatar = new Avatar();
         $avatar->run();
         exit;
