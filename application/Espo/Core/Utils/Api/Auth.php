@@ -58,7 +58,7 @@ class Auth extends \Slim\Middleware
 
         $authenticationMethod = null;
 
-        $espoAuthorizationHeader = $request->headers('Http-Espo-Authorization');
+        $espoAuthorizationHeader = $request->headers('Http-App-Authorization');
         if (isset($espoAuthorizationHeader)) {
             list($username, $password) = explode(':', base64_decode($espoAuthorizationHeader), 2);
         } else {

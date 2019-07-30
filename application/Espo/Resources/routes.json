@@ -2,7 +2,7 @@
     {
         "route": "/",
         "method": "get",
-        "params": "<h1> REST API<\/h1>"
+        "params": "<h1>REST API<\/h1>"
     },
     {
         "route": "/App/user",

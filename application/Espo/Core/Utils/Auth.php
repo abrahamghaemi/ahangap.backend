@@ -137,7 +137,7 @@ class Auth
         $isByTokenOnly = false;
 
         if (!$authenticationMethod) {
-            if ($this->request->headers->get('Http-Espo-Authorization-By-Token') === 'true') {
+            if ($this->request->headers->get('Http-App-Authorization-By-Token') === 'true') {
                 $isByTokenOnly = true;
             }
         }
@@ -247,7 +247,7 @@ class Auth
         $this->getEntityManager()->setUser($user);
         $this->getContainer()->setUser($user);
 
-        if ($this->request->headers->get('Http-Espo-Authorization')) {
+        if ($this->request->headers->get('Http-App-Authorization')) {
             if (!$authToken) {
                 $authToken = $this->getEntityManager()->getEntity('AuthToken');
                 $token = $this->generateToken();
