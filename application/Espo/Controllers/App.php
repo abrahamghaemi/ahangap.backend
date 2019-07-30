@@ -35,6 +35,15 @@ class App extends \Espo\Core\Controllers\Base
 {
     public function actionUser()
     {
+        if($_SERVER['HTTP_CLIENTID']) {
+             $data = $this->getServiceFactory()->create('App')->getUserData();
+
+             return [
+                 'token' => $data['token'],
+                 'help' => 'in header send App-Authorization: base64encode(username:token)'
+
+             ];
+        }
         return $this->getServiceFactory()->create('App')->getUserData();
     }
 
