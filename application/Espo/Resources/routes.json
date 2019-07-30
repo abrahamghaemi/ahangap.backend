@@ -89,6 +89,9 @@
         "params": {
             "controller": "User",
             "action": "avatar"
+        },
+        "conditions": {
+            "auth": false
         }
     },
     {
