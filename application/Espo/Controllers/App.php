@@ -56,4 +56,11 @@ class App extends \Espo\Core\Controllers\Base
         $auth = new \Espo\Core\Utils\Auth($this->getContainer());
         return $auth->destroyAuthToken($data->token);
     }
+
+    public function actionAvatar($params, $data)
+    {
+        $app = new \Espo\Core\Application();
+        $app->runEntryPoint('avatar');
+        exit;
+    }
 }

@@ -13,6 +13,14 @@
         }
     },
     {
+        "route": "/App/avatar",
+        "method": "get",
+        "params": {
+            "controller": "App",
+            "action": "avatar"
+        }
+    },
+    {
         "route": "/Metadata",
         "method": "get",
         "params": {
