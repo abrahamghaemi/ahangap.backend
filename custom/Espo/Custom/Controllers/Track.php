@@ -91,7 +91,10 @@ class Track extends \Espo\Core\Templates\Controllers\Base
             "type" => "lastXDays",
             "attribute" => "publishedDate",
             "value" => 30
-        ]];
+        ],[
+                    "orderBy" => "publishedDate",
+                            "order" => "desc"
+                                ]];
         $params['where'] = $where;
 
         return $this->getListOfTrack($params);

@@ -69,7 +69,7 @@
     },
     {
         "route": "otpManager/send",
-        "method": "post",
+        "method": "POST",
         "params": {
             "controller": "OtpManager",
             "action": "send"

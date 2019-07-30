@@ -4,6 +4,9 @@
         "link": true
     },
     {
+        "name": "publishedDate"
+    },
+    {
         "name": "artist"
     },
     {
@@ -29,8 +32,5 @@
     },
     {
         "name": "album"
-    },
-    {
-        "name": "publishedDate"
     }
 ]
