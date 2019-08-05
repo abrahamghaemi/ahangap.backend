@@ -30,7 +30,7 @@ class OtpManager extends \Espo\Core\Templates\Controllers\Base
 
         if ($entity = $service->create($data)) {
             $this->sendOtp($data);
-            return true;
+            return ["status" => true];
         }
 
         throw new Error();
@@ -45,7 +45,7 @@ class OtpManager extends \Espo\Core\Templates\Controllers\Base
         $entity = $entityManager->getRepository('OtpManager')->where([
             'phone' => $phone,
 			'isClose' => false
-        ])->order('createdAt')->findOne();
+        ])->order('createdAt', 'DESC')->findOne();
 
 
 		if(!is_object($entity) || $entity->get('name') != $name) {
@@ -65,7 +65,7 @@ class OtpManager extends \Espo\Core\Templates\Controllers\Base
                 return $response;
             }
 
-            return true;
+            return ["status" => true];
         }
 
         throw new Error();
