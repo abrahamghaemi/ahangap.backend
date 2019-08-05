@@ -22,6 +22,9 @@
         "name": "artist"
     },
     {
+        "name": "countTrack"
+    },
+    {
         "name": "cover"
     }
 ]

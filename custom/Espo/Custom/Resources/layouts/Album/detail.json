@@ -11,6 +11,12 @@
             ],
             [
                 {
+                    "name": "countTrack"
+                },
+                false
+            ],
+            [
+                {
                     "name": "artistName"
                 },
                 {

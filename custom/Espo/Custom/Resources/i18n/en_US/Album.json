@@ -9,7 +9,8 @@
         "published": "Published",
         "like": "Like",
         "plays": "Plays",
-        "publishedDate": "Published Date"
+        "publishedDate": "Published Date",
+        "countTrack": "Count Track"
     },
     "links": {
         "artist": "Artist",

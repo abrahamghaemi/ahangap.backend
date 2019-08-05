@@ -97,6 +97,13 @@
             "maxLength": null,
             "options": [],
             "isCustom": true
+        },
+        "countTrack": {
+            "type": "int",
+            "min": 0,
+            "default": 0,
+            "max": 200,
+            "isCustom": true
         }
     },
     "links": {
