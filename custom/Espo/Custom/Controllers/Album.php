@@ -20,7 +20,7 @@ class Album extends \Espo\Core\Templates\Controllers\Base
         $where = [[
             "type" => "lastXDays",
             "attribute" => "published",
-            "value" => 30
+            "value" => 420
         ]];
         $params['where'] = $where;
 
