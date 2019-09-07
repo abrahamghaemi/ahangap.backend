@@ -95,7 +95,7 @@
         }
     },
     {
-        "route": "/asset/{id}",
+        "route": "/asset",
         "method": "get",
         "params": {
             "controller": "App",
