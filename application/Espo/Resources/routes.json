@@ -95,6 +95,17 @@
         }
     },
     {
+        "route": "/asset/{id}",
+        "method": "get",
+        "params": {
+            "controller": "App",
+            "action": "asset"
+        },
+        "conditions": {
+            "auth": false
+        }
+    },
+    {
         "route": "/Stream",
         "method": "get",
         "params": {

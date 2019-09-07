@@ -57,4 +57,11 @@ class App extends \Espo\Core\Controllers\Base
         return $auth->destroyAuthToken($data->token);
     }
 
+    public function actionAsset($params, $data, $requst)
+    {
+        $app = new \Espo\Core\Application();
+        $app->runEntryPoint('image');
+        exit;
+    }
+
 }
