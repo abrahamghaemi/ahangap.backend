@@ -8,7 +8,8 @@
         "member": "Member",
         "tracks": "Tracks",
         "members": "Members",
-        "user": "User"
+        "user": "User",
+        "playlistCover": "Playlist cover"
     },
     "links": {
         "member": "Member",

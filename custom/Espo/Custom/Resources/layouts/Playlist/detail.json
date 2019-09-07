@@ -5,7 +5,9 @@
                 {
                     "name": "name"
                 },
-                false
+                {
+                    "name": "playlistCover"
+                }
             ],
             [
                 {
@@ -39,18 +41,5 @@
         "style": "info",
         "dynamicLogicVisible": null,
         "customLabel": "Details"
-    },
-    {
-        "rows": [
-            [
-                {
-                    "name": "cover",
-                    "fullWidth": true
-                }
-            ]
-        ],
-        "style": "primary",
-        "dynamicLogicVisible": null,
-        "customLabel": "Cover"
     }
 ]
