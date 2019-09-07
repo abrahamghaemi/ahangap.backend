@@ -6,6 +6,25 @@ use Espo\Core\Exceptions\NotFound;
 
 class Track extends \Espo\Core\Templates\Controllers\Base
 {
+    public function actionSearch($params, $data, $request)
+    {
+		$params = [];
+        $this->fetchListParamsFromRequest($params, $request, $data);
+		var_dump($params);
+
+	     $where = [[
+            "type" => "contains",
+            "attribute" => "name",
+        //    "value" => $params
+        ],[
+			"orderBy" => "publishedDate",
+             "order" => "desc"
+		]];
+
+
+		return $this->getListOfTrack($params);
+    }
+
     public function actionStream($params, $data, $request)
     {
         $id = $params['id'];
@@ -93,8 +112,9 @@ class Track extends \Espo\Core\Templates\Controllers\Base
             "value" => 60
         ],[
                     "orderBy" => "publishedDate",
+        ], [
                             "order" => "desc"
-                                ]];
+        ]];
         $params['where'] = $where;
 
         return $this->getListOfTrack($params);

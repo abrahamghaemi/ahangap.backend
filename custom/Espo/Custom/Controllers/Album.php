@@ -4,12 +4,20 @@ namespace Espo\Custom\Controllers;
 
 class Album extends \Espo\Core\Templates\Controllers\Base
 {
+    public function actionSearch($params, $data, $request)
+    {
+        $params = [];
+        $this->fetchListParamsFromRequest($params, $request, $data);
+
+        return $this->getListOfAlbum($params);
+    }
+
     public function actionPopular($params, $data, $request)
     {
         $params = [];
         $this->fetchListParamsFromRequest($params, $request, $data);
 
-        return $this->getListOfTrack($params);
+        return $this->getListOfAlbum($params);
     }
 
     public function actionNewest($params, $data, $request)
@@ -24,10 +32,10 @@ class Album extends \Espo\Core\Templates\Controllers\Base
         ]];
         $params['where'] = $where;
 
-        return $this->getListOfTrack($params);
+        return $this->getListOfAlbum($params);
     }
 
-    private function getListOfTrack($params)
+    private function getListOfAlbum($params)
     {
         if (!$this->getAcl()->check($this->name, 'read')) {
             throw new Forbidden();

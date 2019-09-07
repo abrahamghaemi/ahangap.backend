@@ -7,7 +7,14 @@
             "action": "stream",
             "id": ":id"
         }
-    },
+    },{
+		"route": 	"track/search/",
+		"method":	"get",
+		"params": {
+			"controller":	"Track",
+			"action": 	"search"
+		}
+	},
     {
         "route": "episode/:id/stream",
         "method": "get",
@@ -66,7 +73,14 @@
             "controller": "Album",
             "action": "newest"
         }
-    },
+    },{
+		"route": "album/search",
+		"method": "get",
+		"params": {
+			"controller": "Album",
+			"action": "search"
+		}
+	},
     {
         "route": "otpManager/send",
         "method": "POST",
@@ -97,6 +111,21 @@
         "params": {
             "controller": "Artist",
             "action": "newest"
+        }
+    },{
+		"route": "artist/search",
+		"method": "get",
+		"params": {
+			"controller": "Artist",
+			"action": "search"
+		}
+	},
+    {
+        "route": "playlist/public",
+        "method": "GET",
+        "params": {
+            "controller": "Playlist",
+            "action":   "public"
         }
     }
 ]

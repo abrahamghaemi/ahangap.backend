@@ -6,6 +6,15 @@ use Espo\Core\Templates\Controllers\Base as Controller;
 
 class Artist extends Controller
 {
+    public function actionSearch($params, $data, $request)
+    {
+        $params = [];
+        $this->fetchListParamsFromRequest($params, $request, $data);
+
+        return $this->getListOfTrack($params);
+    }
+
+
     public function actionPopular($params, $data, $request)
     {
         $params = [];
