@@ -228,6 +228,11 @@
         },
         "celebrities": {
             "type": "link"
+        },
+        "poster": {
+            "type": "image",
+            "maxFileSize": null,
+            "isCustom": true
         }
     },
     "links": {
@@ -321,6 +326,11 @@
             "entity": "Celebrities",
             "audited": true,
             "isCustom": true
+        },
+        "poster": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true
         }
     },
     "collection": {

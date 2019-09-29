@@ -68,7 +68,9 @@
                 }
             ],
             [
-                false,
+                {
+                    "name": "poster"
+                },
                 {
                     "name": "artist"
                 }

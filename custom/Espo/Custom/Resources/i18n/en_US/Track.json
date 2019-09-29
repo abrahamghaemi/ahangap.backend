@@ -29,7 +29,8 @@
         "publishedDate": "Published Date",
         "tracks": "Tracks",
         "trackParent": "TrackParent",
-        "celebrities": "Celebrities"
+        "celebrities": "Celebrities",
+        "poster": "Poster"
     },
     "links": {
         "categories": "Categories",
