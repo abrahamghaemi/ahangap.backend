@@ -1,0 +1,14 @@
+[
+    "teams",
+    "createdAt",
+    "createdBy",
+    "emailAddress",
+    "title",
+    "type",
+    "isActive",
+    "phoneNumber",
+    "position",
+    "portals",
+    "accounts",
+    "contact"
+]

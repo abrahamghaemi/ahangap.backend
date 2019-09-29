@@ -13,7 +13,8 @@
         "Greptor": "Greptor",
         "EpisodeCategory": "EpisodeCategory",
         "OtpManager": "OtpManager",
-        "Celebrities": "Celebrity"
+        "Celebrities": "Celebrity",
+        "UploadTrack": "Upload track"
     },
     "scopeNamesPlural": {
         "Categories": "Categories",
@@ -29,6 +30,7 @@
         "Greptor": "Greptors",
         "EpisodeCategory": "EpisodeCategories",
         "OtpManager": "OtpManagers",
-        "Celebrities": "Celebrities"
+        "Celebrities": "Celebrities",
+        "UploadTrack": "Upload tracks"
     }
 }

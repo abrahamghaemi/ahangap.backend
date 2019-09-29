@@ -12,14 +12,16 @@
         "like": "Like",
         "user": "User",
         "users": "Users",
-        "greptors": "Greptors"
+        "greptors": "Greptors",
+        "uploadTracks": "UploadTracks"
     },
     "links": {
         "albums": "Albums",
         "tracks": "Tracks",
         "user": "User",
         "users": "Users",
-        "greptors": "Greptors"
+        "greptors": "Greptors",
+        "uploadTracks": "UploadTracks"
     },
     "labels": {
         "Create Artist": "Create Artist"
