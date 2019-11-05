@@ -14,7 +14,8 @@
         "EpisodeCategory": "EpisodeCategory",
         "OtpManager": "OtpManager",
         "Celebrities": "Celebrity",
-        "UploadTrack": "Upload track"
+        "UploadTrack": "Upload track",
+        "Charts": "Charts"
     },
     "scopeNamesPlural": {
         "Categories": "Categories",
@@ -31,6 +32,7 @@
         "EpisodeCategory": "EpisodeCategories",
         "OtpManager": "OtpManagers",
         "Celebrities": "Celebrities",
-        "UploadTrack": "Upload tracks"
+        "UploadTrack": "Upload tracks",
+        "Charts": "Charts"
     }
 }

@@ -15,6 +15,39 @@ class Artist extends Controller
     }
 
 
+    public function actionNotification($params, $data, $request)
+    {
+		$userId = $params['id'];
+        $params = [];
+        $this->fetchListParamsFromRequest($params, $request, $data);
+		// get artist list
+		$entityManager = $this->getEntityManager();
+		$repository = $entityManager->getRepository('User');
+		$result = $repository->get($userId);
+		$trackList = $entityManager->getRepository('User')->findRelated(
+			$result, 'artists', ['select' => ['id']]
+		);
+
+		$dataList = [];
+		foreach($trackList->getValueMapList() as $item) {
+			$artistRepository = $entityManager->getRepository('Artist');
+			$artistResult = $artistRepository->get($item->id);
+			$result = $entityManager->getRepository('Artist')->findRelated(
+				$artistResult, 'tracks', [
+					'select' => ['id', 'name', 'trackUrl', 'img'],
+					'maxSize' => 1,
+					'where' => ['attribute' => 'publishedDate', 'type' => 'lastSevenDays']
+				]
+			);
+			$item->tracks =  $result->getValueMapList();
+			array_push($dataList, $item);
+		}
+
+
+		return $dataList;
+
+
+    }
     public function actionPopular($params, $data, $request)
     {
         $params = [];

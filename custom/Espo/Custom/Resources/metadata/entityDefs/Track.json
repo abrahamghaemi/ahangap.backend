@@ -158,14 +158,16 @@
                 "Jazz",
                 "Rock",
                 "Folk",
-                "Rap"
+                "Rap",
+                "Traditional"
             ],
             "style": {
                 "Pop": null,
                 "Jazz": null,
                 "Rock": null,
                 "Folk": null,
-                "Rap": null
+                "Rap": null,
+                "Traditional": null
             },
             "default": "Pop",
             "isCustom": true,
@@ -232,6 +234,14 @@
         "poster": {
             "type": "image",
             "maxFileSize": null,
+            "isCustom": true
+        },
+        "charts": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
             "isCustom": true
         }
     },
@@ -331,6 +341,14 @@
             "type": "belongsTo",
             "entity": "Attachment",
             "skipOrmDefs": true
+        },
+        "charts": {
+            "type": "hasMany",
+            "relationName": "chartsTrack",
+            "foreign": "tracks",
+            "entity": "Charts",
+            "audited": false,
+            "isCustom": true
         }
     },
     "collection": {

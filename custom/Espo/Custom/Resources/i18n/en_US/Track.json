@@ -30,7 +30,8 @@
         "tracks": "Tracks",
         "trackParent": "TrackParent",
         "celebrities": "Celebrities",
-        "poster": "Poster"
+        "poster": "Poster",
+        "charts": "Charts"
     },
     "links": {
         "categories": "Categories",
@@ -42,7 +43,8 @@
         "users": "Users",
         "tracks": "Tracks",
         "trackParent": "TrackParent",
-        "celebrities": "Celebrities"
+        "celebrities": "Celebrities",
+        "charts": "Charts"
     },
     "labels": {
         "Create Track": "Create Track"
@@ -53,7 +55,8 @@
             "Jazz": "جاز",
             "Rock": "راک",
             "Folk": "محلی",
-            "Rap": "رپ"
+            "Rap": "رپ",
+            "Traditional": "سنتی"
         }
     }
 }

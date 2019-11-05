@@ -114,12 +114,21 @@
         }
     },{
 		"route": "artist/search",
-		"method": "get",
+		"method": "GET",
 		"params": {
 			"controller": "Artist",
 			"action": "search"
 		}
 	},
+    {
+        "route": "artist/notification/:id/tracks",
+        "method": "GET",
+        "params": {
+            "controller": "Artist",
+            "action": "notification",
+            "id": ":id"
+        }
+    },
     {
         "route": "playlist/public",
         "method": "GET",
