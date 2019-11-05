@@ -1,0 +1,12 @@
+{
+    "fields": {
+        "cover": "Cover",
+        "tracks": "Tracks"
+    },
+    "links": {
+        "tracks": "Tracks"
+    },
+    "labels": {
+        "Create Charts": "Create Charts"
+    }
+}
