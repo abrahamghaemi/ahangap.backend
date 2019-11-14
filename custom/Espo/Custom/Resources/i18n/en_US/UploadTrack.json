@@ -3,7 +3,9 @@
         "file": "File",
         "cover": "Cover",
         "artist": "Artist",
-        "converted": "Converted"
+        "converted": "Converted",
+        "publishedDate": "Published date",
+        "genres": "Genres"
     },
     "links": {
         "artist": "Artist"

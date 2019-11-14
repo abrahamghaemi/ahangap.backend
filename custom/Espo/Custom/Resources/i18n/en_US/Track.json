@@ -31,7 +31,8 @@
         "trackParent": "TrackParent",
         "celebrities": "Celebrities",
         "poster": "Poster",
-        "charts": "Charts"
+        "charts": "Charts",
+        "api": "Api"
     },
     "links": {
         "categories": "Categories",

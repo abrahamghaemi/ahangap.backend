@@ -243,6 +243,12 @@
             "importDisabled": false,
             "noLoad": false,
             "isCustom": true
+        },
+        "api": {
+            "notNull": true,
+            "type": "bool",
+            "default": true,
+            "isCustom": true
         }
     },
     "links": {

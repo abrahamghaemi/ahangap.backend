@@ -13,7 +13,9 @@
                 {
                     "name": "like"
                 },
-                false
+                {
+                    "name": "genre"
+                }
             ],
             [
                 {
@@ -28,7 +30,7 @@
                     "name": "cover"
                 },
                 {
-                    "name": "genre"
+                    "name": "poster"
                 }
             ],
             [

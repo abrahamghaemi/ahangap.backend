@@ -13,7 +13,8 @@
         "user": "User",
         "users": "Users",
         "greptors": "Greptors",
-        "uploadTracks": "UploadTracks"
+        "uploadTracks": "UploadTracks",
+        "poster": "Poster"
     },
     "links": {
         "albums": "Albums",

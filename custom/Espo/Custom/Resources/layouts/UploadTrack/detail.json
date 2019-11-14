@@ -19,6 +19,14 @@
             ],
             [
                 {
+                    "name": "converted"
+                },
+                {
+                    "name": "publishedDate"
+                }
+            ],
+            [
+                {
                     "name": "description",
                     "fullWidth": true
                 }

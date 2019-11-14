@@ -55,6 +55,21 @@
             "notNull": true,
             "type": "bool",
             "isCustom": true
+        },
+        "publishedDate": {
+            "notNull": false,
+            "type": "date",
+            "default": "javascript: return this.dateTime.getToday();",
+            "after": null,
+            "before": null,
+            "isCustom": true
+        },
+        "genres": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
         }
     },
     "links": {
