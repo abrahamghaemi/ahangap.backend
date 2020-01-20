@@ -67,16 +67,21 @@
             "options": [],
             "isCustom": true
         },
+        "users": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
+        },
         "tracks": {
             "type": "linkMultiple",
             "layoutDetailDisabled": false,
             "layoutMassUpdateDisabled": false,
-            "noLoad": false,
             "importDisabled": false,
+            "noLoad": false,
             "isCustom": true
-        },
-        "user": {
-            "type": "link"
         }
     },
     "links": {
@@ -103,17 +108,19 @@
             "entity": "Attachment",
             "skipOrmDefs": true
         },
-        "tracks": {
+        "users": {
             "type": "hasMany",
-            "foreign": "genre",
-            "entity": "Track",
+            "relationName": "userGenres",
+            "foreign": "genres",
+            "entity": "User",
             "audited": false,
             "isCustom": true
         },
-        "user": {
-            "type": "belongsTo",
+        "tracks": {
+            "type": "hasMany",
+            "relationName": "genresTrack",
             "foreign": "genres",
-            "entity": "User",
+            "entity": "Track",
             "audited": false,
             "isCustom": true
         }

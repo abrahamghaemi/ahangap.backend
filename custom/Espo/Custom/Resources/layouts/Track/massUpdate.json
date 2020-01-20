@@ -5,6 +5,7 @@
     "genre",
     "artist",
     "albumId",
+    "publishedDate",
     "album",
     "genres",
     "teams"

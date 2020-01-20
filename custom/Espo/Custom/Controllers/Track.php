@@ -109,11 +109,11 @@ class Track extends \Espo\Core\Templates\Controllers\Base
         $where = [[
             "type" => "lastXDays",
             "attribute" => "publishedDate",
-            "value" => 60
+            "value" => 6
         ],[
                     "orderBy" => "publishedDate",
         ], [
-                            "order" => "desc"
+                            "order" => "asc"
         ]];
         $params['where'] = $where;
 

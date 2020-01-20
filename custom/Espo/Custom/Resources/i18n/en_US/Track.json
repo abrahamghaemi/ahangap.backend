@@ -45,7 +45,8 @@
         "tracks": "Tracks",
         "trackParent": "TrackParent",
         "celebrities": "Celebrities",
-        "charts": "Charts"
+        "charts": "Charts",
+        "genres": "Genres"
     },
     "labels": {
         "Create Track": "Create Track"

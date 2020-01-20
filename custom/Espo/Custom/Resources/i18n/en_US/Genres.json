@@ -6,11 +6,13 @@
         "img": "Img",
         "translate": "Translate",
         "tracks": "Tracks",
-        "user": "User"
+        "user": "User",
+        "users": "Users"
     },
     "links": {
         "tracks": "Tracks",
-        "user": "User"
+        "user": "User",
+        "users": "Users"
     },
     "labels": {
         "Create Genres": "Create Genres"

@@ -13,7 +13,9 @@
                 {
                     "name": "countTrack"
                 },
-                false
+                {
+                    "name": "poster"
+                }
             ],
             [
                 {

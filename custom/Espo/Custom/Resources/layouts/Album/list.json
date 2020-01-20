@@ -7,7 +7,10 @@
         "name": "artistName"
     },
     {
-        "name": "like"
+        "name": "cover"
+    },
+    {
+        "name": "poster"
     },
     {
         "name": "plays"
@@ -20,11 +23,5 @@
     },
     {
         "name": "artist"
-    },
-    {
-        "name": "countTrack"
-    },
-    {
-        "name": "cover"
     }
 ]

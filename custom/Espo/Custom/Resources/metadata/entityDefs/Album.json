@@ -104,6 +104,11 @@
             "default": 0,
             "max": 200,
             "isCustom": true
+        },
+        "poster": {
+            "type": "image",
+            "maxFileSize": 0.2,
+            "isCustom": true
         }
     },
     "links": {
@@ -145,6 +150,11 @@
             "entity": "User",
             "audited": false,
             "isCustom": true
+        },
+        "poster": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true
         }
     },
     "collection": {

@@ -35,14 +35,6 @@
             "maxLength": null,
             "isCustom": true
         },
-        "genres": {
-            "type": "linkMultiple",
-            "layoutDetailDisabled": false,
-            "layoutMassUpdateDisabled": false,
-            "noLoad": false,
-            "importDisabled": false,
-            "isCustom": true
-        },
         "playlists": {
             "type": "linkMultiple",
             "layoutDetailDisabled": false,
@@ -57,6 +49,14 @@
             "isCustom": true
         },
         "artists": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
+        },
+        "genres": {
             "type": "linkMultiple",
             "layoutDetailDisabled": false,
             "layoutMassUpdateDisabled": false,
@@ -89,13 +89,6 @@
             "audited": false,
             "isCustom": true
         },
-        "genres": {
-            "type": "hasMany",
-            "foreign": "user",
-            "entity": "Genres",
-            "audited": false,
-            "isCustom": true
-        },
         "playlists": {
             "type": "hasMany",
             "foreign": "user",
@@ -113,6 +106,14 @@
             "relationName": "userArtist",
             "foreign": "users",
             "entity": "Artist",
+            "audited": true,
+            "isCustom": true
+        },
+        "genres": {
+            "type": "hasMany",
+            "relationName": "userGenres",
+            "foreign": "users",
+            "entity": "Genres",
             "audited": true,
             "isCustom": true
         }

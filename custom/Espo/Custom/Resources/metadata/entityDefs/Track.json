@@ -152,7 +152,7 @@
             "type": "link"
         },
         "genres": {
-            "type": "enum",
+            "type": "linkMultiple",
             "options": [
                 "Pop",
                 "Jazz",
@@ -171,10 +171,11 @@
             },
             "default": "Pop",
             "isCustom": true,
-            "isSorted": true
-        },
-        "genre": {
-            "type": "link"
+            "isSorted": true,
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false
         },
         "playlists": {
             "type": "linkMultiple",
@@ -292,13 +293,6 @@
             "audited": false,
             "isCustom": true
         },
-        "genre": {
-            "type": "belongsTo",
-            "foreign": "tracks",
-            "entity": "Genres",
-            "audited": false,
-            "isCustom": true
-        },
         "playlists": {
             "type": "hasMany",
             "relationName": "playlistTrack",
@@ -354,6 +348,14 @@
             "foreign": "tracks",
             "entity": "Charts",
             "audited": false,
+            "isCustom": true
+        },
+        "genres": {
+            "type": "hasMany",
+            "relationName": "genresTrack",
+            "foreign": "tracks",
+            "entity": "Genres",
+            "audited": true,
             "isCustom": true
         }
     },
