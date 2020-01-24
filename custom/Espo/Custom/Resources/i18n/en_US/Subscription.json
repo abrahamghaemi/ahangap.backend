@@ -1,0 +1,14 @@
+{
+    "fields": {
+        "dateStart": "Date start",
+        "dateEnd": "Date end",
+        "active": "Active",
+        "price": "Price",
+        "amount": "Amount",
+        "invoiceKey": "Invoice key"
+    },
+    "links": [],
+    "labels": {
+        "Create Subscription": "Create Subscription"
+    }
+}
