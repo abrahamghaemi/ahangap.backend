@@ -76,7 +76,8 @@ Espo.define('views/fields/url', 'views/fields/varchar', function (Dep) {
             var url = this.model.get(this.name);
             if (url && url != '') {
                 if (!(url.indexOf('http://') === 0) && !(url.indexOf('https://') === 0)) {
-                    url = 'http://' + url;
+                    //url = 'http://' + url;
+                    url = 'https://stream.ahangap.com'+ url;
                 }
                 return url;
             }
