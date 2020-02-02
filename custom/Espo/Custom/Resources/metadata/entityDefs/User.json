@@ -63,6 +63,20 @@
             "importDisabled": false,
             "noLoad": false,
             "isCustom": true
+        },
+        "invoices": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "noLoad": false,
+            "importDisabled": false,
+            "isCustom": true
+        },
+        "subscribed": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
         }
     },
     "links": {
@@ -115,6 +129,13 @@
             "foreign": "users",
             "entity": "Genres",
             "audited": true,
+            "isCustom": true
+        },
+        "invoices": {
+            "type": "hasMany",
+            "foreign": "user",
+            "entity": "Invoice",
+            "audited": false,
             "isCustom": true
         }
     }

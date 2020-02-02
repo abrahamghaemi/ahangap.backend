@@ -5,7 +5,9 @@
                 {
                     "name": "userName"
                 },
-                false
+                {
+                    "name": "subscribed"
+                }
             ],
             [
                 {

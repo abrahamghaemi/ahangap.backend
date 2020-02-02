@@ -8,7 +8,9 @@
         "genres": "Genres",
         "artists": "Artists",
         "playlists": "Playlists",
-        "cover": "Cover"
+        "cover": "Cover",
+        "invoices": "Invoices",
+        "subscribed": "Subscribed"
     },
     "links": {
         "tracks": "Tracks",
@@ -16,6 +18,10 @@
         "albums": "Albums",
         "genres": "Genres",
         "artists": "Artists",
-        "playlists": "Playlists"
+        "playlists": "Playlists",
+        "invoices": "Invoices"
+    },
+    "tooltips": {
+        "subscribed": "user plan subscribed"
     }
 }

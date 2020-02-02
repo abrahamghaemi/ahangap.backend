@@ -16,7 +16,8 @@
         "Celebrities": "Celebrity",
         "UploadTrack": "Upload track",
         "Charts": "Charts",
-        "Subscription": "Subscription"
+        "Subscription": "Subscription",
+        "Invoice": "Invoice"
     },
     "scopeNamesPlural": {
         "Categories": "Categories",
@@ -35,6 +36,7 @@
         "Celebrities": "Celebrities",
         "UploadTrack": "Upload tracks",
         "Charts": "Charts",
-        "Subscription": "Subscriptions"
+        "Subscription": "Subscriptions",
+        "Invoice": "Invoices"
     }
 }

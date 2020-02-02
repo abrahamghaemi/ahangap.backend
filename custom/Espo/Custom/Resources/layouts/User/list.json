@@ -8,18 +8,14 @@
         "width": 20
     },
     {
-        "name": "phoneNumber"
+        "name": "subscribed"
     },
     {
-        "name": "emailAddress",
-        "width": 20
+        "name": "phoneNumber"
     },
     {
         "name": "isActive",
         "width": 10
-    },
-    {
-        "name": "type"
     },
     {
         "name": "roles"
