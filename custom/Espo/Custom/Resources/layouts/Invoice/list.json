@@ -1,0 +1,27 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "plan"
+    },
+    {
+        "name": "transactionId"
+    },
+    {
+        "name": "user"
+    },
+    {
+        "name": "open"
+    },
+    {
+        "name": "amount"
+    },
+    {
+        "name": "createdAt"
+    },
+    {
+        "name": "expiresAt"
+    }
+]

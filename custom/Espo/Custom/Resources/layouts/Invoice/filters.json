@@ -1,0 +1,9 @@
+[
+    "open",
+    "createdAt",
+    "assignedUser",
+    "modifiedAt",
+    "name",
+    "transactionId",
+    "amount"
+]
