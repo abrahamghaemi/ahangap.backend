@@ -1,6 +1,8 @@
 [
     "open",
+    "user",
     "createdAt",
+    "expiresAt",
     "assignedUser",
     "modifiedAt",
     "name",

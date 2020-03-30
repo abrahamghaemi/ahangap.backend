@@ -7,6 +7,9 @@
         "name": "img"
     },
     {
+        "name": "trackUrl"
+    },
+    {
         "name": "publishedDate"
     },
     {

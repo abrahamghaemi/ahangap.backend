@@ -1,6 +1,7 @@
 [
     "assignedUser",
     "albumName",
+    "img",
     "artists",
     "genre",
     "artist",

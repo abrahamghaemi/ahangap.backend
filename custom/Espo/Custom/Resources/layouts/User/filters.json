@@ -2,6 +2,7 @@
     "teams",
     "createdAt",
     "createdBy",
+    "subscribed",
     "emailAddress",
     "title",
     "type",

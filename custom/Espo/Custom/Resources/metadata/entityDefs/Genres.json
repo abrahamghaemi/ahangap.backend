@@ -82,6 +82,11 @@
             "importDisabled": false,
             "noLoad": false,
             "isCustom": true
+        },
+        "icon": {
+            "type": "image",
+            "maxFileSize": 0.1,
+            "isCustom": true
         }
     },
     "links": {
@@ -123,6 +128,11 @@
             "entity": "Track",
             "audited": false,
             "isCustom": true
+        },
+        "icon": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true
         }
     },
     "collection": {
