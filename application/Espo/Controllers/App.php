@@ -64,4 +64,10 @@ class App extends \Espo\Core\Controllers\Base
         exit;
     }
 
+    public function actionSubCheck($params, $data)
+    {
+        $userData = $this->getServiceFactory()->create('App')->getUserData();
+        return $userData['user']->subscribed;
+    }
+
 }

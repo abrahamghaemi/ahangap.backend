@@ -56,6 +56,17 @@ class User extends \Espo\Core\Controllers\Record
         return $this->getAclManager()->getMap($user);
     }
 
+    public function actionSubCheck($params, $data, $request)
+    {
+     $id = $_SERVER['HTTP_CLIENTID'];
+    $entity = $this->getRecordService()->read($id);
+
+
+
+        $e = $entity->getValueMap();
+        return ['status' => $e->subscribed];
+    }
+
     public function postActionChangeOwnPassword($params, $data, $request)
     {
         if (!property_exists($data, 'password') || !property_exists($data, 'currentPassword')) {

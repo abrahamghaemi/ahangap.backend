@@ -13,6 +13,14 @@
         }
     },
     {
+        "route": "/App/user/subscription/check",
+        "method": "get",
+        "params":{
+            "controller": "User",
+            "action": "SubCheck"
+        }
+    },
+    {
         "route": "/Metadata",
         "method": "get",
         "params": {
