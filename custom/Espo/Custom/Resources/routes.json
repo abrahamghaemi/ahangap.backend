@@ -136,5 +136,13 @@
             "controller": "Playlist",
             "action":   "public"
         }
+    },
+    {
+        "route": "playlist/private",
+        "method": "GET",
+        "params": {
+            "controller": "Playlist",
+            "action": "private"
+        }
     }
 ]
