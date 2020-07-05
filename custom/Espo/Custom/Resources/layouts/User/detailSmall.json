@@ -1,0 +1,46 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name",
+                    "fullWidth": true
+                }
+            ],
+            [
+                {
+                    "name": "userName",
+                    "fullWidth": true
+                }
+            ],
+            [
+                {
+                    "name": "emailAddress",
+                    "fullWidth": true
+                }
+            ],
+            [
+                {
+                    "name": "phoneNumber",
+                    "fullWidth": true
+                }
+            ],
+            [
+                {
+                    "name": "teams",
+                    "fullWidth": true
+                }
+            ],
+            [
+                {
+                    "name": "type"
+                },
+                {
+                    "name": "isActive"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]

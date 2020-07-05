@@ -1,0 +1,25 @@
+[
+    {
+        "name": "invoices"
+    },
+    {
+        "name": "playlists"
+    },
+    {
+        "name": "artists"
+    },
+    {
+        "name": "albums"
+    },
+    {
+        "name": "tracks",
+        "style": "primary"
+    },
+    {
+        "name": "genres"
+    },
+    {
+        "name": "episodes",
+        "style": "primary"
+    }
+]

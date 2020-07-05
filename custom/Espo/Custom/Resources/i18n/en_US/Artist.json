@@ -1,0 +1,36 @@
+{
+    "fields": {
+        "img": "Img",
+        "appId": "App Id",
+        "simplename": "Simple Name",
+        "translate": "Translate",
+        "albums": "Albums",
+        "tracks": "Tracks",
+        "cover": "Cover",
+        "genre": "Genre",
+        "country": "Country",
+        "like": "Like",
+        "user": "User",
+        "users": "Users",
+        "greptors": "Greptors",
+        "uploadTracks": "UploadTracks",
+        "poster": "Poster"
+    },
+    "links": {
+        "albums": "Albums",
+        "tracks": "Tracks",
+        "user": "User",
+        "users": "Users",
+        "greptors": "Greptors",
+        "uploadTracks": "UploadTracks"
+    },
+    "labels": {
+        "Create Artist": "Create Artist"
+    },
+    "options": {
+        "country": {
+            "Iran": "ایران",
+            "USA": "آمریکا"
+        }
+    }
+}

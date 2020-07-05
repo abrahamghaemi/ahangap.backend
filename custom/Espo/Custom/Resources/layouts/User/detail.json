@@ -1,0 +1,46 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "userName"
+                },
+                {
+                    "name": "subscribed"
+                }
+            ],
+            [
+                {
+                    "name": "cover"
+                },
+                {
+                    "name": "avatarLink"
+                }
+            ],
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "title"
+                }
+            ],
+            [
+                {
+                    "name": "emailAddress"
+                },
+                {
+                    "name": "phoneNumber"
+                }
+            ],
+            [
+                {
+                    "name": "gender"
+                },
+                false
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]

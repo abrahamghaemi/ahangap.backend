@@ -1,0 +1,47 @@
+{
+  "fields": {
+    "dateFormat": "Formato Data",
+    "timeFormat": "Formato Ora",
+    "weekStart": "Primo giorno della Settimana",
+    "thousandSeparator": "Separatore delle migliaia",
+    "decimalMark": "Marcatore dei Decimali",
+    "defaultCurrency": "Valuta di default",
+    "currencyList": "Elenco Valute",
+    "language": "Lingua",
+    "smtpPort": "Porta",
+    "smtpAuth": "Autenticato",
+    "smtpSecurity": "Sicurezza",
+    "smtpEmailAddress": "Indirizzo Email",
+    "exportDelimiter": "Delimitatore esportazione",
+    "signature": "Firma Email",
+    "dashboardTabList": "Elenco schede",
+    "tabList": "Elenco schede",
+    "defaultReminders": "Promemoria di Defaul",
+    "theme": "Tema",
+    "useCustomTabList": "Elenco schede personalizzate",
+    "receiveAssignmentEmailNotifications": "Notifiche via email al momento dell' assegnazione",
+    "receiveMentionEmailNotifications": "Notifiche via email in caso di menzioni nei post",
+    "receiveStreamEmailNotifications": "Notifiche via email per i messaggi e gli aggiornamenti di stato",
+    "dashboardLayout": "Layout panoramica",
+    "emailReplyForceHtml": "Email di risposta in HTML",
+    "emailUseExternalClient": "Utilizzare un client di posta elettronica esterno",
+    "scopeColorsDisabled": "Disabilita campo colori",
+    "tabColorsDisabled": "Disabilita tabella colori"
+  },
+  "options": {
+    "weekStart": {
+      "0": "Domenica",
+      "1": "Lunedi"
+    }
+  },
+  "labels": {
+    "Notifications": "Notifica",
+    "User Interface": "Interfaccia Utente",
+    "Misc": "Varie",
+    "Reset Dashboard to Default": "Reimposta dashboard su predefinito"
+  },
+  "tooltips": {
+    "followCreatedEntities": "Quando si creano nuovi record, verranno automaticamente seguiti anche se assegnati a un altro utente.",
+    "followCreatedEntityTypeList": "Quando si creano nuovi record di tipi di entità selezionati, questi verranno seguiti automaticamente anche se assegnati a un altro utente."
+  }
+}

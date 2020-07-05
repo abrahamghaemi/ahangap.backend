@@ -1,0 +1,44 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "plan"
+                }
+            ],
+            [
+                {
+                    "name": "amount"
+                },
+                {
+                    "name": "transactionId"
+                }
+            ],
+            [
+                {
+                    "name": "open"
+                },
+                {
+                    "name": "user"
+                }
+            ],
+            [
+                {
+                    "name": "expiresAt"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "description",
+                    "fullWidth": true
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]

@@ -1,0 +1,42 @@
+{
+    "scopeNames": {
+        "Categories": "Categories",
+        "Genres": "Genres",
+        "Artist": "Artist",
+        "Track": "Track",
+        "Album": "Album",
+        "Discover": "Discover",
+        "Playlist": "Playlist",
+        "Member": "Member",
+        "Channel": "Channel",
+        "Episode": "Episode",
+        "Greptor": "Greptor",
+        "EpisodeCategory": "EpisodeCategory",
+        "OtpManager": "OtpManager",
+        "Celebrities": "Celebrity",
+        "UploadTrack": "Upload track",
+        "Charts": "Charts",
+        "Subscription": "Subscription",
+        "Invoice": "Invoice"
+    },
+    "scopeNamesPlural": {
+        "Categories": "Categories",
+        "Genres": "Genres",
+        "Artist": "Artists",
+        "Track": "Tracks",
+        "Album": "Albums",
+        "Discover": "Discovers",
+        "Playlist": "Playlists",
+        "Member": "Members",
+        "Channel": "Channels",
+        "Episode": "Episodes",
+        "Greptor": "Greptors",
+        "EpisodeCategory": "EpisodeCategories",
+        "OtpManager": "OtpManagers",
+        "Celebrities": "Celebrities",
+        "UploadTrack": "Upload tracks",
+        "Charts": "Charts",
+        "Subscription": "Subscriptions",
+        "Invoice": "Invoices"
+    }
+}

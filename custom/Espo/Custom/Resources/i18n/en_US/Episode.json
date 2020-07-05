@@ -1,0 +1,29 @@
+{
+    "fields": {
+        "trackcover": "Trackcover",
+        "likes": "Likes",
+        "stream": "Stream",
+        "hLS": "HLS",
+        "channel": "Channel",
+        "update": "Update",
+        "trackUrl": "Track url",
+        "duration": "Duration",
+        "private": "Private",
+        "playcount": "Play count",
+        "url": "Url",
+        "author": "Author",
+        "releasedate": "Release date",
+        "website": "Website",
+        "downloadcount": "Download count",
+        "episodeCategory": "EpisodeCategory",
+        "users": "Users"
+    },
+    "links": {
+        "channel": "Channel",
+        "episodeCategory": "EpisodeCategory",
+        "users": "Users"
+    },
+    "labels": {
+        "Create Episode": "Create Episode"
+    }
+}

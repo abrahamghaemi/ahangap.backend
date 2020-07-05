@@ -1,0 +1,44 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "translate"
+                }
+            ],
+            [
+                {
+                    "name": "isComedy"
+                },
+                {
+                    "name": "listenerCount"
+                }
+            ],
+            [
+                {
+                    "name": "img"
+                },
+                {
+                    "name": "icon"
+                }
+            ],
+            [
+                {
+                    "name": "token"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "description",
+                    "fullWidth": true
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]

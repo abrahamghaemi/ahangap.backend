@@ -1,0 +1,24 @@
+{
+    "fields": {
+        "translate": "Translate",
+        "artist": "Artist",
+        "tracks": "Tracks",
+        "cover": "Cover",
+        "artistName": "Artist name",
+        "user": "User",
+        "published": "Published",
+        "like": "Like",
+        "plays": "Plays",
+        "publishedDate": "Published Date",
+        "countTrack": "Count Track",
+        "poster": "Poster"
+    },
+    "links": {
+        "artist": "Artist",
+        "tracks": "Tracks",
+        "user": "User"
+    },
+    "labels": {
+        "Create Album": "Create Album"
+    }
+}

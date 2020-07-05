@@ -1,0 +1,45 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "playlistCover"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                },
+                false
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "private"
+                },
+                {
+                    "name": "releaseDate"
+                }
+            ],
+            [
+                {
+                    "name": "genre"
+                },
+                {
+                    "name": "tags"
+                }
+            ]
+        ],
+        "style": "info",
+        "dynamicLogicVisible": null,
+        "customLabel": "Details"
+    }
+]

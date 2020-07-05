@@ -1,0 +1,21 @@
+{
+    "fields": {
+        "listenerCount": "ListenerCount",
+        "isComedy": "IsComedy",
+        "token": "Token",
+        "img": "Img",
+        "translate": "Translate",
+        "tracks": "Tracks",
+        "user": "User",
+        "users": "Users",
+        "icon": "Icon"
+    },
+    "links": {
+        "tracks": "Tracks",
+        "user": "User",
+        "users": "Users"
+    },
+    "labels": {
+        "Create Genres": "Create Genres"
+    }
+}

@@ -1,0 +1,37 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "feedcover"
+                }
+            ],
+            [
+                {
+                    "name": "played"
+                },
+                {
+                    "name": "subscribed"
+                }
+            ],
+            [
+                {
+                    "name": "author"
+                },
+                {
+                    "name": "episodeCategory"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]

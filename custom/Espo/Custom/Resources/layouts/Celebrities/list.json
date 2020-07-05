@@ -1,0 +1,15 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "translate"
+    },
+    {
+        "name": "assignedUser"
+    },
+    {
+        "name": "createdAt"
+    }
+]

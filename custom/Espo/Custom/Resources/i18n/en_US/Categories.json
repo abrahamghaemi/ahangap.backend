@@ -1,0 +1,14 @@
+{
+    "fields": {
+        "translate": "Translate",
+        "img": "Img",
+        "categoryurl": "Category url",
+        "tracks": "Tracks"
+    },
+    "links": {
+        "tracks": "Tracks"
+    },
+    "labels": {
+        "Create Categories": "Create Categories"
+    }
+}

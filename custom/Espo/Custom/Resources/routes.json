@@ -1,0 +1,148 @@
+[
+    {
+        "route": "track/:id/stream",
+        "method": "get",
+        "params": {
+            "controller": "Track",
+            "action": "stream",
+            "id": ":id"
+        }
+    },{
+		"route": 	"track/search/",
+		"method":	"get",
+		"params": {
+			"controller":	"Track",
+			"action": 	"search"
+		}
+	},
+    {
+        "route": "episode/:id/stream",
+        "method": "get",
+        "params": {
+            "controller": "Episode",
+            "action": "stream",
+            "id": ":id"
+        }
+    },
+    {
+        "route": "episode/:id/liked",
+        "method": "put",
+        "params": {
+            "controller": "Episode",
+            "action": "like",
+            "id": ":id"
+        }
+    },
+    {
+        "route": "track/:id/liked",
+        "method": "put",
+        "params": {
+            "controller": "Track",
+            "action": "like",
+            "id": ":id"
+        }
+    },
+    {
+        "route": "track/newest",
+        "method": "get",
+        "params": {
+            "controller": "Track",
+            "action": "newest"
+        }
+    },
+    {
+        "route": "track/popular",
+        "method": "get",
+        "params": {
+            "controller": "Track",
+            "action": "popular"
+        }
+    },
+    {
+    "route": "album/popular",
+    "method": "get",
+        "params": {
+          "controller": "Album",
+          "action": "popular"
+        }
+    },
+    {
+        "route": "album/newest",
+        "method": "get",
+        "params": {
+            "controller": "Album",
+            "action": "newest"
+        }
+    },{
+		"route": "album/search",
+		"method": "get",
+		"params": {
+			"controller": "Album",
+			"action": "search"
+		}
+	},
+    {
+        "route": "otpManager/send",
+        "method": "POST",
+        "params": {
+            "controller": "OtpManager",
+            "action": "send"
+        }
+    },
+    {
+        "route": "otpManager/verify",
+        "method": "PUT",
+        "params": {
+            "controller": "OtpManager",
+            "action": "verify"
+        }
+    },
+    {
+        "route": "artist/popular",
+        "method": "GET",
+        "params": {
+            "controller": "Artist",
+            "action": "popular"
+        }
+    },
+    {
+        "route": "artist/newest",
+        "method": "GET",
+        "params": {
+            "controller": "Artist",
+            "action": "newest"
+        }
+    },{
+		"route": "artist/search",
+		"method": "GET",
+		"params": {
+			"controller": "Artist",
+			"action": "search"
+		}
+	},
+    {
+        "route": "artist/notification/:id/tracks",
+        "method": "GET",
+        "params": {
+            "controller": "Artist",
+            "action": "notification",
+            "id": ":id"
+        }
+    },
+    {
+        "route": "playlist/public",
+        "method": "GET",
+        "params": {
+            "controller": "Playlist",
+            "action":   "public"
+        }
+    },
+    {
+        "route": "playlist/private",
+        "method": "GET",
+        "params": {
+            "controller": "Playlist",
+            "action": "private"
+        }
+    }
+]

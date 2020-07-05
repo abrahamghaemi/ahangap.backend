@@ -1,0 +1,16 @@
+{
+    "fields": {
+        "file": "File",
+        "cover": "Cover",
+        "artist": "Artist",
+        "converted": "Converted",
+        "publishedDate": "Published date",
+        "genres": "Genres"
+    },
+    "links": {
+        "artist": "Artist"
+    },
+    "labels": {
+        "Create UploadTrack": "Create Upload track"
+    }
+}

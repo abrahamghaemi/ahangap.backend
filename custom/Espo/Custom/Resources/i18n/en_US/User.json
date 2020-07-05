@@ -1,0 +1,27 @@
+{
+    "fields": {
+        "tracks": "Tracks",
+        "episodes": "Episodes",
+        "albums": "Albums",
+        "premiumUser": "Premium user",
+        "avatarLink": "Avatar link",
+        "genres": "Genres",
+        "artists": "Artists",
+        "playlists": "Playlists",
+        "cover": "Cover",
+        "invoices": "Invoices",
+        "subscribed": "Subscribed"
+    },
+    "links": {
+        "tracks": "Tracks",
+        "episodes": "Episodes",
+        "albums": "Albums",
+        "genres": "Genres",
+        "artists": "Artists",
+        "playlists": "Playlists",
+        "invoices": "Invoices"
+    },
+    "tooltips": {
+        "subscribed": "user plan subscribed"
+    }
+}

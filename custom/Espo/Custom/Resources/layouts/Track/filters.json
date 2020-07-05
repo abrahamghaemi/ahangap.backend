@@ -1,0 +1,22 @@
+[
+    "createdAt",
+    "modifiedAt",
+    "isDownload",
+    "albumName",
+    "assignedUser",
+    "albumId",
+    "img",
+    "downloadUrl",
+    "poster",
+    "duration",
+    "artist",
+    "lyric",
+    "artists",
+    "likes",
+    "published",
+    "description",
+    "publishedDate",
+    "genres",
+    "translate",
+    "name"
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "img"
+    },
+    {
+        "name": "trackUrl"
+    },
+    {
+        "name": "publishedDate"
+    },
+    {
+        "name": "artist"
+    },
+    {
+        "name": "artists"
+    },
+    {
+        "name": "translate"
+    },
+    {
+        "name": "duration"
+    },
+    {
+        "name": "genres"
+    },
+    {
+        "name": "genre"
+    },
+    {
+        "name": "likes"
+    },
+    {
+        "name": "albumId"
+    },
+    {
+        "name": "album"
+    }
+]

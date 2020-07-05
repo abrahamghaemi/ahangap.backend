@@ -1,0 +1,28 @@
+{
+  "fields": {
+    "width": "Larghezza (%)",
+    "notSortable": "Non Ordinabile",
+    "align": "Allinea",
+    "panelName": "Nome del pannello",
+    "style": "Stile",
+    "sticked": "Fissato",
+    "isLarge": "Misura carattere grande",
+    "dynamicLogicVisible": "Condizioni che rendono visibile il pannello"
+  },
+  "options": {
+    "align": {
+      "left": "Sinistra",
+      "right": "Destra"
+    },
+    "style": {
+      "success": "Successo",
+      "danger": "Pericolo",
+      "warning": "Avvertimento",
+      "primary": "Primario"
+    }
+  },
+  "labels": {
+    "New panel": "Nuovo Pannello",
+    "Layout": "Struttura"
+  }
+}

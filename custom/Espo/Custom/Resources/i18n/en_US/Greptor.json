@@ -1,0 +1,21 @@
+{
+    "fields": {
+        "type": "Type",
+        "done": "Done",
+        "link": "Link",
+        "artists": "Artists"
+    },
+    "links": {
+        "artists": "Artists"
+    },
+    "labels": {
+        "Create Greptor": "Create Greptor"
+    },
+    "options": {
+        "type": {
+            "track": "track",
+            "artist": "artist",
+            "album": "album"
+        }
+    }
+}

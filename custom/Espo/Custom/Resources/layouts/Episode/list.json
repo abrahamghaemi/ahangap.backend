@@ -1,0 +1,29 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "trackcover",
+        "width": 20,
+        "align": "left"
+    },
+    {
+        "name": "duration"
+    },
+    {
+        "name": "playcount"
+    },
+    {
+        "name": "likes"
+    },
+    {
+        "name": "dislikes"
+    },
+    {
+        "name": "channel"
+    },
+    {
+        "name": "createdAt"
+    }
+]

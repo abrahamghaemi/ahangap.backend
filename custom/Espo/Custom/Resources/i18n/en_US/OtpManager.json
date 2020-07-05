@@ -1,0 +1,11 @@
+{
+    "fields": {
+        "phone": "Phone",
+        "status": "Status",
+        "isClose": "Is close"
+    },
+    "links": [],
+    "labels": {
+        "Create OtpManager": "Create OtpManager"
+    }
+}

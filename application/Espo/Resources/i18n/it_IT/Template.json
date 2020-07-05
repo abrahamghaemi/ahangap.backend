@@ -1,0 +1,41 @@
+{
+  "fields": {
+    "name": "Nome",
+    "body": "Corpo",
+    "entityType": "Tipo di entità",
+    "header": "Intestazione",
+    "footer": "Piè di pagina",
+    "leftMargin": "Margine Sinistro",
+    "topMargin": "Marigne Superiore",
+    "rightMargin": "Margine Destro",
+    "bottomMargin": "Margine Inferiore",
+    "printFooter": "Stampa piè di Pagina",
+    "footerPosition": "Posizione piè  di pagina",
+    "variables": "Segnaposto disponibili",
+    "pageOrientation": "Orientamento pagina",
+    "pageFormat": "Formato carta"
+  },
+  "labels": {
+    "Create Template": "Crea Modello"
+  },
+  "tooltips": {
+    "footer": "Utilizzare {pageNumber} per stampare il numero di pagina ."
+  },
+  "options": {
+    "pageOrientation": {
+      "Portrait": "Ritratto",
+      "Landscape": "Paesaggio"
+    },
+    "placeholders": {
+      "today": "Oggi (Data)",
+      "now": "Ora (data-ora)"
+    },
+    "fontFace": {
+      "aealarabiya": "Al Arabiya",
+      "pdfasymbol": "Simbolo PDFA",
+      "stsongstdlight": "STSong STD Light",
+      "symbol": "Simbolo",
+      "times": "Tempi"
+    }
+  }
+}

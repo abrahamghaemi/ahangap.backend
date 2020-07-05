@@ -1,0 +1,20 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "feedcover",
+        "width": 10,
+        "align": "left"
+    },
+    {
+        "name": "played"
+    },
+    {
+        "name": "subscribed"
+    },
+    {
+        "name": "createdAt"
+    }
+]

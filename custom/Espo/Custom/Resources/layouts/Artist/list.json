@@ -1,0 +1,24 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "simplename"
+    },
+    {
+        "name": "poster"
+    },
+    {
+        "name": "cover"
+    },
+    {
+        "name": "genre"
+    },
+    {
+        "name": "translate"
+    },
+    {
+        "name": "appId"
+    }
+]

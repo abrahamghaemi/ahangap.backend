@@ -1,0 +1,22 @@
+{
+    "fields": {
+        "cover": "Cover",
+        "tracks": "Tracks",
+        "routeUrl": "Route url",
+        "routes": "Routes"
+    },
+    "links": {
+        "tracks": "Tracks"
+    },
+    "labels": {
+        "Create Discover": "Create Discover"
+    },
+    "options": {
+        "routes": {
+            "https://5cfaef0c2e59fde353.app.beatsmusic.ir/api/v1/album/newest": "Newest Albums",
+            "https://5cfaef0c2e59fde353.app.beatsmusic.ir/api/v1/album/popular": "Popular Albums",
+            "https://5cfaef0c2e59fde353.app.beatsmusic.ir/api/v1/track/newest": "Newest Music",
+            "https://5cfaef0c2e59fde353.app.beatsmusic.ir/api/v1/track/popular": "Popular Music"
+        }
+    }
+}

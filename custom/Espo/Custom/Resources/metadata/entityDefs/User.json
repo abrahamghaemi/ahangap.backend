@@ -1,0 +1,142 @@
+{
+    "fields": {
+        "tracks": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
+        },
+        "episodes": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
+        },
+        "albums": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "noLoad": false,
+            "importDisabled": false,
+            "isCustom": true
+        },
+        "premiumUser": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "avatarLink": {
+            "type": "url",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "playlists": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "noLoad": false,
+            "importDisabled": false,
+            "isCustom": true
+        },
+        "cover": {
+            "type": "image",
+            "maxFileSize": 0.5,
+            "isCustom": true
+        },
+        "artists": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
+        },
+        "genres": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
+        },
+        "invoices": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "noLoad": false,
+            "importDisabled": false,
+            "isCustom": true
+        },
+        "subscribed": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "tracks": {
+            "type": "hasMany",
+            "relationName": "likeTrack",
+            "foreign": "users",
+            "entity": "Track",
+            "audited": false,
+            "isCustom": true
+        },
+        "episodes": {
+            "type": "hasMany",
+            "relationName": "likeEpisode",
+            "foreign": "users",
+            "entity": "Episode",
+            "audited": false,
+            "isCustom": true
+        },
+        "albums": {
+            "type": "hasMany",
+            "foreign": "user",
+            "entity": "Album",
+            "audited": false,
+            "isCustom": true
+        },
+        "playlists": {
+            "type": "hasMany",
+            "foreign": "user",
+            "entity": "Playlist",
+            "audited": false,
+            "isCustom": true
+        },
+        "cover": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true
+        },
+        "artists": {
+            "type": "hasMany",
+            "relationName": "userArtist",
+            "foreign": "users",
+            "entity": "Artist",
+            "audited": true,
+            "isCustom": true
+        },
+        "genres": {
+            "type": "hasMany",
+            "relationName": "userGenres",
+            "foreign": "users",
+            "entity": "Genres",
+            "audited": true,
+            "isCustom": true
+        },
+        "invoices": {
+            "type": "hasMany",
+            "foreign": "user",
+            "entity": "Invoice",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

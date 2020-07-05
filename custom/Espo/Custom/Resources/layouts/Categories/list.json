@@ -1,0 +1,16 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "translate"
+    },
+    {
+        "name": "img",
+        "width": 10,
+        "link": true,
+        "notSortable": true,
+        "align": "left"
+    }
+]

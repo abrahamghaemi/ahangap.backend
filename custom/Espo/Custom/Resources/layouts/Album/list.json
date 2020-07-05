@@ -1,0 +1,27 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "artistName"
+    },
+    {
+        "name": "cover"
+    },
+    {
+        "name": "poster"
+    },
+    {
+        "name": "plays"
+    },
+    {
+        "name": "publishedDate"
+    },
+    {
+        "name": "published"
+    },
+    {
+        "name": "artist"
+    }
+]

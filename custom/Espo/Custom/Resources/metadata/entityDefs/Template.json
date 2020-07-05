@@ -1,0 +1,9 @@
+{
+    "fields": {
+        "international": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        }
+    }
+}

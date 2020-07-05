@@ -1,0 +1,25 @@
+{
+    "fields": {
+        "amount": "Amount",
+        "open": "Open",
+        "transactionId": "TransactionId",
+        "user": "User",
+        "plan": "Plan",
+        "expiresAt": "Expires At",
+        "expired": "Expired"
+    },
+    "links": {
+        "user": "User"
+    },
+    "labels": {
+        "Create Invoice": "Create Invoice"
+    },
+    "options": {
+        "plan": {
+            "1 month": "1 month",
+            "3 month": "3 month",
+            "6 month": "6 month",
+            "1 Years": "1 Years"
+        }
+    }
+}

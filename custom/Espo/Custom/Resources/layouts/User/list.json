@@ -1,0 +1,26 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "userName",
+        "width": 20
+    },
+    {
+        "name": "subscribed"
+    },
+    {
+        "name": "phoneNumber"
+    },
+    {
+        "name": "isActive",
+        "width": 10
+    },
+    {
+        "name": "roles"
+    },
+    {
+        "name": "teams"
+    }
+]

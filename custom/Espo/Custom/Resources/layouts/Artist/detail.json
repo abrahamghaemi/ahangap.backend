@@ -1,0 +1,46 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "simplename"
+                }
+            ],
+            [
+                {
+                    "name": "like"
+                },
+                {
+                    "name": "genre"
+                }
+            ],
+            [
+                {
+                    "name": "appId"
+                },
+                {
+                    "name": "translate"
+                }
+            ],
+            [
+                {
+                    "name": "cover"
+                },
+                {
+                    "name": "poster"
+                }
+            ],
+            [
+                {
+                    "name": "description",
+                    "fullWidth": true
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]

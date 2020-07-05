@@ -1,0 +1,49 @@
+{
+  "fields": {
+    "name": "Ім'я",
+    "status": "Статус",
+    "host": "Хост",
+    "username": "Ім'я користувача",
+    "password": "Пароль",
+    "port": "Порт",
+    "monitoredFolders": "Відслідковувані теки",
+    "fetchSince": "Отримати з",
+    "emailAddress": "Поштова скринька",
+    "sentFolder": "Папка відправлені",
+    "storeSentEmails": "Зберігати надіслані повідомлення",
+    "keepFetchedEmailsUnread": "Залишати завантажені повідомлення електронної пошти непрочитаними",
+    "emailFolder": "Покласти в папку",
+    "useImap": "Отримувати електронні листи",
+    "useSmtp": "Використати SMTP",
+    "smtpHost": "SMTP Хост",
+    "smtpPort": "SMTP Порт",
+    "smtpAuth": "SMTP автентифікація",
+    "smtpSecurity": "SMTP Безпека",
+    "smtpUsername": "SMTP Ім'я користувача",
+    "smtpPassword": "SMTP Пароль"
+  },
+  "links": {
+    "filters": "Фільтри",
+    "emails": "Електронні листи"
+  },
+  "options": {
+    "status": {
+      "Active": "Активний",
+      "Inactive": "Неактивний"
+    }
+  },
+  "labels": {
+    "Create EmailAccount": "Додати емейл-акаунт",
+    "Main": "Основне",
+    "Test Connection": "Перевірити з'єднання",
+    "Send Test Email": "Надіслати тестове електронне повідомлення"
+  },
+  "messages": {
+    "couldNotConnectToImap": "Не вдається підключитися до сервера IMAP",
+    "connectionIsOk": "З'єднання з IMAP сервером пройшло вдало"
+  },
+  "tooltips": {
+    "monitoredFolders": "Можна додати папку \"Надіслані\" для синхронізації електронних листів, надісланих із зовнішнього поштового клієнта.",
+    "storeSentEmails": "Надіслані повідомлення зберігатимуться на сервері IMAP. Поле адреса електронної пошти має збігатися з адресою, з якої надсилатимуться повідомлення."
+  }
+}

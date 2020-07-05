@@ -1,0 +1,54 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "translate"
+                }
+            ],
+            [
+                {
+                    "name": "countTrack"
+                },
+                {
+                    "name": "poster"
+                }
+            ],
+            [
+                {
+                    "name": "artistName"
+                },
+                {
+                    "name": "artist"
+                }
+            ],
+            [
+                {
+                    "name": "like"
+                },
+                {
+                    "name": "plays"
+                }
+            ],
+            [
+                {
+                    "name": "published"
+                },
+                {
+                    "name": "publishedDate"
+                }
+            ],
+            [
+                {
+                    "name": "cover"
+                },
+                false
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]

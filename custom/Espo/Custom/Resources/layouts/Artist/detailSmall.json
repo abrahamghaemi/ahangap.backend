@@ -1,0 +1,36 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name",
+                    "fullWidth": true
+                }
+            ],
+            [
+                {
+                    "name": "translate"
+                },
+                {
+                    "name": "appId"
+                }
+            ],
+            [
+                {
+                    "name": "img"
+                },
+                {
+                    "name": "simplename"
+                }
+            ],
+            [
+                {
+                    "name": "description",
+                    "fullWidth": true
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]

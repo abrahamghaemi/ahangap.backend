@@ -1,0 +1,209 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": true,
+            "trim": true
+        },
+        "description": {
+            "type": "text"
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "assignedUser": {
+            "type": "link",
+            "required": true,
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple",
+            "view": "views/fields/teams"
+        },
+        "trackcover": {
+            "type": "url",
+            "readOnly": true,
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "likes": {
+            "type": "int",
+            "readOnly": true,
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "stream": {
+            "type": "url",
+            "readOnly": true,
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "hLS": {
+            "type": "url",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "channel": {
+            "type": "link"
+        },
+        "update": {
+            "type": "varchar",
+            "readOnly": true,
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "trackUrl": {
+            "type": "url",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "duration": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "private": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "playcount": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "url": {
+            "type": "url",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "author": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "releasedate": {
+            "notNull": false,
+            "type": "datetime",
+            "default": null,
+            "after": null,
+            "before": null,
+            "minuteStep": 30,
+            "isCustom": true
+        },
+        "website": {
+            "type": "url",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "downloadcount": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "episodeCategory": {
+            "type": "link"
+        },
+        "users": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "EntityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "channel": {
+            "type": "belongsTo",
+            "foreign": "episodes",
+            "entity": "Channel",
+            "audited": true,
+            "isCustom": true
+        },
+        "episodeCategory": {
+            "type": "belongsTo",
+            "foreign": "episodes",
+            "entity": "EpisodeCategory",
+            "audited": true,
+            "isCustom": true
+        },
+        "users": {
+            "type": "hasMany",
+            "relationName": "likeEpisode",
+            "foreign": "episodes",
+            "entity": "User",
+            "audited": false,
+            "isCustom": true
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc"
+    },
+    "indexes": {
+        "name": {
+            "columns": [
+                "name",
+                "deleted"
+            ]
+        },
+        "assignedUser": {
+            "columns": [
+                "assignedUserId",
+                "deleted"
+            ]
+        }
+    }
+}

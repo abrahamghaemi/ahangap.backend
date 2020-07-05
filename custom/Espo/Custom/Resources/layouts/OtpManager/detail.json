@@ -1,0 +1,31 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "phone"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "status"
+                },
+                {
+                    "name": "isClose"
+                }
+            ]
+        ],
+        "style": "primary",
+        "dynamicLogicVisible": null,
+        "customLabel": "Status"
+    }
+]

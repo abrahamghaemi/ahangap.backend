@@ -1,0 +1,34 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name",
+                    "fullWidth": true
+                }
+            ],
+            [
+                {
+                    "name": "translate"
+                },
+                {
+                    "name": "img"
+                }
+            ],
+            [
+                {
+                    "name": "categoryurl"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "description"
+                },
+                false
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]

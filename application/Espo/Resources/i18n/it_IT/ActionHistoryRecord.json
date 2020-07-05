@@ -1,0 +1,18 @@
+{
+  "fields": {
+    "createdAt": "Data",
+    "authToken": "Token di autenticazione",
+    "authLogRecord": "Record di log auth"
+  },
+  "links": {
+    "authToken": "Token di autenticazione",
+    "authLogRecord": "Record di log auth"
+  },
+  "options": {
+    "action": {
+      "update": "Aggiorna",
+      "delete": "Elimina",
+      "create": "Crea"
+    }
+  }
+}

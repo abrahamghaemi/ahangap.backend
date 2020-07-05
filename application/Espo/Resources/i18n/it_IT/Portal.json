@@ -1,0 +1,29 @@
+{
+  "fields": {
+    "name": "Nome",
+    "portalRoles": "Ruoli",
+    "isActive": "Attivo",
+    "isDefault": "Default",
+    "tabList": "Elenco schede",
+    "quickCreateList": "Elenco creazione rapida",
+    "theme": "Tema",
+    "language": "Lingua",
+    "dateFormat": "Formato Data",
+    "timeFormat": "Formato Ora",
+    "weekStart": "Primo giorno della Settimana",
+    "defaultCurrency": "Valuta di default"
+  },
+  "links": {
+    "users": "Utenti",
+    "portalRoles": "Ruoli"
+  },
+  "tooltips": {
+    "portalRoles": "I Ruoli specificati verranno applicati a tutti gli utenti di questo portale ."
+  },
+  "labels": {
+    "Create Portal": "Crea Portale",
+    "User Interface": "Interfaccia Utente",
+    "General": "Generale",
+    "Settings": "Impostazioni"
+  }
+}

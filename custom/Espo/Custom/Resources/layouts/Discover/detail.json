@@ -1,0 +1,38 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "cover",
+                    "fullWidth": true
+                }
+            ],
+            [
+                {
+                    "name": "routeUrl",
+                    "fullWidth": true
+                }
+            ],
+            [
+                {
+                    "name": "routes",
+                    "fullWidth": true
+                }
+            ],
+            [
+                {
+                    "name": "description",
+                    "fullWidth": true
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]

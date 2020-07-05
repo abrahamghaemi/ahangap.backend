@@ -1,0 +1,17 @@
+{
+    "fields": {
+        "subscribed": "Subscribed",
+        "played": "Played",
+        "feedcover": "Feedcover",
+        "episodes": "Episodes",
+        "author": "Author",
+        "episodeCategory": "EpisodeCategory"
+    },
+    "links": {
+        "episodes": "Episodes",
+        "episodeCategory": "EpisodeCategory"
+    },
+    "labels": {
+        "Create Channel": "Create Channel"
+    }
+}

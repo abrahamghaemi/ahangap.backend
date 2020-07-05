@@ -1,0 +1,35 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "type"
+                },
+                {
+                    "name": "done"
+                }
+            ],
+            [
+                {
+                    "name": "link",
+                    "fullWidth": true
+                }
+            ],
+            [
+                {
+                    "name": "description",
+                    "fullWidth": true
+                }
+            ]
+        ],
+        "style": "info",
+        "dynamicLogicVisible": null,
+        "customLabel": "Overview"
+    }
+]

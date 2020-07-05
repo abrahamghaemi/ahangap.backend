@@ -1,0 +1,28 @@
+{
+  "fields": {
+    "name": "Nome",
+    "status": "Stato",
+    "body": "Corpo",
+    "subject": "Soggetto",
+    "attachments": "Allegato",
+    "insertField": "Inserisci Campo",
+    "category": "Categoria"
+  },
+  "labels": {
+    "Create EmailTemplate": "Crea Modello email",
+    "Available placeholders": "Segnaposto disponibili"
+  },
+  "tooltips": {
+    "oneOff": "Controllare se avete intenzione di utilizzare questo modello una sola volta. Per esempio. per Email Massive."
+  },
+  "presetFilters": {
+    "actual": "Attuale"
+  },
+  "messages": {
+    "infoText": "Segna posti disponibili:\n\n{optOutUrl} &#8211; URL per link di cancellazione;\n\n{optOutLink} &#8211; un link di cancellazione."
+  },
+  "placeholderTexts": {
+    "optOutUrl": "URL per un link di cancellazione dell'iscrizione",
+    "optOutLink": "un link di cancellazione dell'iscrizione"
+  }
+}

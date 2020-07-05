@@ -1,0 +1,38 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "userName"
+                }
+            ],
+            [
+                {
+                    "name": "playlist"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "password"
+                },
+                {
+                    "name": "avatar"
+                }
+            ],
+            [
+                {
+                    "name": "firstName"
+                },
+                {
+                    "name": "lastName"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]

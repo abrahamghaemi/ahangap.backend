@@ -1,0 +1,102 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "translate"
+                }
+            ],
+            [
+                {
+                    "name": "albumName"
+                },
+                {
+                    "name": "albumId"
+                }
+            ],
+            [
+                {
+                    "name": "published"
+                },
+                {
+                    "name": "genres"
+                }
+            ],
+            [
+                {
+                    "name": "publishedDate"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "likes"
+                },
+                {
+                    "name": "dislikes"
+                }
+            ],
+            [
+                {
+                    "name": "isDownload"
+                },
+                {
+                    "name": "plays"
+                }
+            ],
+            [
+                {
+                    "name": "stream",
+                    "fullWidth": true
+                }
+            ],
+            [
+                {
+                    "name": "segmentlist",
+                    "fullWidth": true
+                }
+            ],
+            [
+                {
+                    "name": "trackUrl"
+                },
+                {
+                    "name": "arrangement"
+                }
+            ],
+            [
+                {
+                    "name": "poster"
+                },
+                {
+                    "name": "artist"
+                }
+            ],
+            [
+                {
+                    "name": "img"
+                },
+                {
+                    "name": "duration"
+                }
+            ],
+            [
+                {
+                    "name": "lyric",
+                    "fullWidth": true
+                }
+            ],
+            [
+                {
+                    "name": "description",
+                    "fullWidth": true
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]
