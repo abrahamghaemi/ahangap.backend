@@ -5,7 +5,8 @@
         "transactionId": "TransactionId",
         "user": "User",
         "plan": "Plan",
-        "expiresAt": "Expires At"
+        "expiresAt": "Expires At",
+        "expired": "Expired"
     },
     "links": {
         "user": "User"

@@ -26,6 +26,8 @@ class Playlist extends \Espo\Core\Templates\Controllers\Base
 
             $where = [['type'=>'isFalse', 'attribute'=>'private']];
             $params['where'] = $where;
+            $params['orderBy'] = 'createdAt';
+            $params['order'] = 'desc';
         }
 
 
@@ -64,6 +66,7 @@ class Playlist extends \Espo\Core\Templates\Controllers\Base
         if (!empty($params['maxSize']) && $params['maxSize'] > $maxSizeLimit) {
             throw new Forbidden("Max size should should not exceed " . $maxSizeLimit . ". Use offset and limit.");
         }
+
 
         $result = $this->getRecordService()->find($params);
 

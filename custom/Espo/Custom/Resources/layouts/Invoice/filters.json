@@ -1,8 +1,9 @@
 [
     "open",
+    "expired",
+    "plan",
     "user",
     "createdAt",
-    "expiresAt",
     "assignedUser",
     "modifiedAt",
     "name",

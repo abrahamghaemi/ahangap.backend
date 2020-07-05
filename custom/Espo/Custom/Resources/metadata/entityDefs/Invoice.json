@@ -87,6 +87,11 @@
             "after": null,
             "before": null,
             "isCustom": true
+        },
+        "expired": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
         }
     },
     "links": {
