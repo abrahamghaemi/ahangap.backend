@@ -47,6 +47,16 @@ class App extends \Espo\Core\Controllers\Base
         return $this->getServiceFactory()->create('App')->getUserData();
     }
 
+    public function actionVersion()
+    {
+        return [
+            'package' => "package.name",
+            'version' => '1.3.1',
+            'releaseAt' => date("Y-m-d"),
+            'cdn' => 'https://ahangap.com/ahangap_v1.3.apk'
+        ];
+    }
+
     public function postActionDestroyAuthToken($params, $data)
     {
         if (empty($data->token)) {

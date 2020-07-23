@@ -60,11 +60,24 @@ class User extends \Espo\Core\Controllers\Record
     {
      $id = $_SERVER['HTTP_CLIENTID'];
     $entity = $this->getRecordService()->read($id);
-
-
-
         $e = $entity->getValueMap();
-        return ['status' => $e->subscribed];
+     $pdo = $this->getEntityManager()->getPDO();
+     $sql = "select name, amount,created_at, plan from invoice where user_id = " . $pdo->quote($id) . " and open = 0  order by created_at limit 3";
+     $sth = $pdo->prepare($sql);
+             $sth->execute();
+     $invoices = $sth->fetchAll(\PDO::FETCH_CLASS);
+     if($invoices){
+         $expiredAt = strtotime(
+             "+{$invoices[0]->plan}s", strtotime($invoices[0]->created_at)
+         );
+         $expiredAt = date("Y-m-d", $expiredAt);
+
+     }
+     return [
+        'status' => $e->subscribed,
+        'expiredAt' => $expiredAt,
+        'invoices' => $invoices
+     ];
     }
 
     public function postActionChangeOwnPassword($params, $data, $request)

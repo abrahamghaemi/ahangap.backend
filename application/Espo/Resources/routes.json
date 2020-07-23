@@ -21,6 +21,14 @@
         }
     },
     {
+        "route": "App/version",
+        "method": "get",
+        "params": {
+            "controller": "App",
+            "action": "version"
+        }
+    },
+    {
         "route": "/Metadata",
         "method": "get",
         "params": {
