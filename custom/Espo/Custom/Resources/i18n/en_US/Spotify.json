@@ -1,0 +1,19 @@
+{
+    "fields": {
+        "link": "Link",
+        "done": "Done",
+        "type": "Type"
+    },
+    "links": [],
+    "labels": {
+        "Create Spotify": "Create Spotify"
+    },
+    "options": {
+        "type": {
+            "track": "track",
+            "playlist": "playlist",
+            "album": "album",
+            "artist": "artist"
+        }
+    }
+}

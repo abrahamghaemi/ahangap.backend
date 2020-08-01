@@ -17,7 +17,8 @@
         "UploadTrack": "Upload track",
         "Charts": "Charts",
         "Subscription": "Subscription",
-        "Invoice": "Invoice"
+        "Invoice": "Invoice",
+        "Spotify": "Spotify"
     },
     "scopeNamesPlural": {
         "Categories": "Categories",
@@ -37,6 +38,7 @@
         "UploadTrack": "Upload tracks",
         "Charts": "Charts",
         "Subscription": "Subscriptions",
-        "Invoice": "Invoices"
+        "Invoice": "Invoices",
+        "Spotify": "Spotifies"
     }
 }
